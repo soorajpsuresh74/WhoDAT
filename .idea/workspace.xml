@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94baeefe-f19c-490d-88d3-ab6887df43c8" name="Changes" comment="sample env is added">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="94baeefe-f19c-490d-88d3-ab6887df43c8" name="Changes" comment="secrets fixed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -167,14 +165,42 @@
       <option name="project" value="LOCAL" />
       <updated>1738393106983</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="sample env is added">
+      <option name="closed" value="true" />
+      <created>1738393216442</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738393216442</updated>
+    </task>
+    <task id="LOCAL-00007" summary="secrets fixed">
+      <option name="closed" value="true" />
+      <created>1738393519661</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738393519661</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rew" />
     <MESSAGE value="ip address checking logic is added" />
     <MESSAGE value="sample env is added" />
-    <option name="LAST_COMMIT_MESSAGE" value="sample env is added" />
+    <MESSAGE value="secrets fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="secrets fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
