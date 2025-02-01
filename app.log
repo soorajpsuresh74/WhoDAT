@@ -1,0 +1,18 @@
+2025-02-01 13:06:14,795 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 13:06:14,796 - MySecretLogger - INFO - VIRUS_TOTAL_ENDPOINT: Obtained
+2025-02-01 13:06:14,796 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 13:06:14,796 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 13:06:14,796 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 13:06:14,796 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 13:06:14,796 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 13:06:15,634 - Home.py - INFO - User accessed the Overview section.
+2025-02-01 13:06:32,605 - website_analysis_ui - INFO - User clicked Analyze Website for https://www.youtube.com/watch?v=8JJ101D3knE
+2025-02-01 13:08:23,878 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 13:08:23,878 - MySecretLogger - INFO - VIRUS_TOTAL_ENDPOINT: Obtained
+2025-02-01 13:08:23,878 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 13:08:23,878 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 13:08:23,878 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 13:08:23,878 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 13:08:23,878 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 13:08:24,598 - Home.py - INFO - User accessed the Overview section.
+2025-02-01 13:08:32,169 - website_analysis_ui - INFO - User clicked Analyze Website for https://www.virustotal.com/

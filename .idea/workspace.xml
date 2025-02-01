@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94baeefe-f19c-490d-88d3-ab6887df43c8" name="Changes" comment="secrets fixed" />
+    <list default="true" id="94baeefe-f19c-490d-88d3-ab6887df43c8" name="Changes" comment="LICENSE added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Home.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,7 +186,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738393519661</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="secrets fixed">
+      <option name="closed" value="true" />
+      <created>1738393625023</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1738393625023</updated>
+    </task>
+    <task id="LOCAL-00009" summary="LICENSE added">
+      <option name="closed" value="true" />
+      <created>1738393739453</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738393739453</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,7 +221,8 @@
     <MESSAGE value="ip address checking logic is added" />
     <MESSAGE value="sample env is added" />
     <MESSAGE value="secrets fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="secrets fixed" />
+    <MESSAGE value="LICENSE added" />
+    <option name="LAST_COMMIT_MESSAGE" value="LICENSE added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

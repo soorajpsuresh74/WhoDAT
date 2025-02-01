@@ -1,11 +1,11 @@
 import streamlit as st
 
 from WhoDATLogger import setup_logger
-from src.core.virusTotal.virusTotal import virus_total
 from src.gui.attachmentAnalysisUI import attachment_analysis_ui
 from src.gui.emailAnalysisUI import email_analysis_ui
 from src.gui.ipAnalysisUI import ip_analysis_ui
 from src.gui.urlAnalysisUI import url_analysis_ui
+from src.gui.websiteAnalysisUI import website_analysis_ui
 
 logger = setup_logger("Home.py")
 
@@ -14,7 +14,7 @@ st.set_page_config(page_title=app_title, page_icon=r'assets/images/cyber-securit
 
 st.sidebar.title("Navigation")
 app_mode = st.sidebar.radio("Select a Section",
-                            ("Overview", "Email Analysis", "URL Analysis", "IP Analysis", "Attachment Analysis"))
+                            ("Overview", "Email Analysis", "URL Analysis", "IP Analysis", "Attachment Analysis", "Website Analysis", "Whois Analysis", "DMARC Analysis"))
 
 st.title("WhoDAT - Cybersecurity Tool")
 st.markdown("""
@@ -47,4 +47,15 @@ elif app_mode == "IP Analysis":
 
 elif app_mode == "Attachment Analysis":
     attachment_analysis_ui()
+
+elif app_mode == "Website Analysis":
+    website_analysis_ui()
+
+elif app_mode == "Whois Analysis":
+    pass
+
+elif app_mode == "DMARC Analysis":
+    pass
+
+
 
