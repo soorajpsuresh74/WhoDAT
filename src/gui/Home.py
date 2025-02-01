@@ -16,29 +16,33 @@ app_mode = st.sidebar.radio("Select a Section",
 st.title("WhoDAT - Cybersecurity Tool")
 st.markdown("""
  * Use the menu on the left to select data and set plot parameters
- * Your plots will appear below
+ * Your results will appear below.
 """)
 st.header("Analyze Emails, URLs, IPs, and Attachments")
 
+# Initialize session state
+if "uploaded_email_file" not in st.session_state:
+    st.session_state.uploaded_email_file = None
+
+if "uploaded_attachment_file" not in st.session_state:
+    st.session_state.uploaded_attachment_file = None
+
 if app_mode == "Overview":
     st.subheader("Overview")
-    st.text("Here is a quick overview of the tool's functionality.")
-    st.text("You can upload files or enter URLs for analysis.")
+    st.text("Quick overview of the tool's functionality.")
     logger.info("User accessed the Overview section.")
 
 elif app_mode == "Email Analysis":
     st.subheader("Email Analysis")
-    email_input = st.text_input("Enter an email address:")
-    uploaded_file = st.file_uploader("Upload an email file for analysis")
+    uploaded_file = st.file_uploader("Upload an email file for analysis", key="email_upload")
 
-    if uploaded_file is not None:
-        logger.info("Email file uploaded for analysis.")
+    if uploaded_file is not None and uploaded_file != st.session_state.uploaded_email_file:
+        st.session_state.uploaded_email_file = uploaded_file
+        logger.info("New email file uploaded for analysis.")
+
         try:
             email_analysis = EmailAnalysis(uploaded_file)
             st.write("Metadata:", email_analysis.metadata)
-            # st.write("Content:", email_analysis.content)
-            # st.write("Links:", email_analysis.links)
-            # st.write("Attachments:", email_analysis.attachments)
 
             if email_analysis.links:
                 try:
@@ -46,36 +50,21 @@ elif app_mode == "Email Analysis":
                     vt_result = virus_total(email_analysis.links)
                     st.subheader("VirusTotal Scan Results")
                     st.json(vt_result)
-                    logger.info(f"VirusTotal results: {vt_result}")
                 except Exception as e:
                     logger.error(f"Error during VirusTotal scan: {e}")
                     st.error(f"VirusTotal scan failed: {e}")
             else:
                 st.info("No links found in the email for scanning.")
 
-            if email_analysis.attachments:
-                try:
-                    logger.info(f"Scanning email attachments: {email_analysis.attachments}")
-                    vt_result = virus_total_attachments(email_analysis.attachments)
-                    st.subheader("VirusTotal Scan Results")
-                    st.json(vt_result)
-                    logger.info(f"VirusTotal results: {vt_result}")
-                except Exception as e:
-                    logger.error(f"Error during VirusTotal scan: {e}")
-                    st.error(f"VirusTotal scan failed: {e}")
-
-
-
         except Exception as e:
             logger.error(f"Error processing email file: {e}")
             st.error(f"An error occurred: {e}")
-    else:
+    elif uploaded_file is None:
         st.info("Please upload an email file to proceed.")
 
 elif app_mode == "URL Analysis":
     st.subheader("URL Analysis")
     url_input = st.text_input("Enter a URL:")
-    uploaded_file = st.file_uploader("Upload a file for analysis")
     analyze_button = st.button("Analyze URL")
 
     if analyze_button:
@@ -85,7 +74,6 @@ elif app_mode == "URL Analysis":
                 vt_result = virus_total([url_input])
                 st.subheader("VirusTotal Scan Results")
                 st.json(vt_result)
-                logger.info(f"VirusTotal results for {url_input}: {vt_result}")
             except Exception as e:
                 logger.error(f"Error scanning URL {url_input}: {e}")
                 st.error(f"URL scan failed: {e}")
@@ -95,7 +83,6 @@ elif app_mode == "URL Analysis":
 elif app_mode == "IP Analysis":
     st.subheader("IP Analysis")
     ip_input = st.text_input("Enter an IP address:")
-    uploaded_file = st.file_uploader("Upload a file for analysis")
     analyze_button = st.button("Analyze IP")
 
     if analyze_button:
@@ -105,7 +92,6 @@ elif app_mode == "IP Analysis":
                 vt_result = virus_total([ip_input])
                 st.subheader("VirusTotal Scan Results")
                 st.json(vt_result)
-                logger.info(f"VirusTotal results for {ip_input}: {vt_result}")
             except Exception as e:
                 logger.error(f"Error scanning IP {ip_input}: {e}")
                 st.error(f"IP scan failed: {e}")
@@ -114,12 +100,19 @@ elif app_mode == "IP Analysis":
 
 elif app_mode == "Attachment Analysis":
     st.subheader("Attachment Analysis")
-    uploaded_file = st.file_uploader("Upload a file for attachment analysis")
+    uploaded_file = st.file_uploader("Upload a file for attachment analysis", key="attachment_upload")
     analyze_button = st.button("Analyze Attachment")
 
+    if uploaded_file is not None and uploaded_file != st.session_state.uploaded_attachment_file:
+        st.session_state.uploaded_attachment_file = uploaded_file
+        print(type(uploaded_file))
+        logger.info(f"New attachment uploaded: {uploaded_file}")
+
     if analyze_button:
-        if uploaded_file:
-            logger.info("User uploaded an attachment for analysis.")
-            st.success("Attachment analysis is currently under development.")
+        if st.session_state.uploaded_attachment_file:
+            logger.info(f"Analyzing attachment: {st.session_state.uploaded_attachment_file.name}")
+            vt_result = virus_total_attachments([st.session_state.uploaded_attachment_file])
+            st.subheader("VirusTotal Scan Results")
+            st.json(vt_result)
         else:
             st.warning("Please upload an attachment first.")

@@ -84,18 +84,16 @@ def virus_total_attachments(attachments):
     for attachment in attachments:
         try:
             if isinstance(attachment, str):
-                file_obj = open(attachment, "rb")
-                filename = attachment.split("/")[-1]  # Extract filename
+                with open(attachment, "rb") as file_obj:
+                    filename = attachment.split("/")[-1]
+                    files = {"file": (filename, file_obj.read())}
             else:
-                file_obj = attachment
-                filename = attachment.filename
+                filename = attachment.name
+                files = {"file": (filename, attachment.getvalue())}
 
             logger.info(f"Uploading file: {filename}")
 
-            files = {"file": (filename, file_obj)}
             response = requests.post(VT_FILE_UPLOAD_ENDPOINT, headers=headers, files=files)
-
-            file_obj.close()
 
             if response.status_code == 200:
                 response_data = response.json()
