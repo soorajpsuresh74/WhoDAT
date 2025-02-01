@@ -165,3 +165,13 @@ delete_url: "/_stcore/upload_file/b61447eb-8264-40ea-8d29-7ab932ed678d/fc144fac-
 2025-02-01 11:57:56,546 - VirusTotalLogger - INFO - Uploading file: Issue with Course Details Tab in Application Process.eml
 2025-02-01 11:57:58,429 - VirusTotalLogger - INFO - File uploaded successfully. Analysis ID: ZjljNzEyNGNhZmJiYjI4NmIxYTQ0YWQ3MzA0Y2IxN2M6MTczODM5MTI3OA==
 2025-02-01 11:57:59,074 - VirusTotalLogger - INFO - Analysis Report: {'malicious': 0, 'suspicious': 0, 'undetected': 0, 'harmless': 0, 'timeout': 0, 'confirmed-timeout': 0, 'failure': 0, 'type-unsupported': 0}
+2025-02-01 12:08:53,797 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 12:08:53,798 - MySecretLogger - INFO - VIRUS_TOTAL_ENDPOINT: Obtained
+2025-02-01 12:08:54,411 - Home.py - INFO - User accessed the Overview section.
+2025-02-01 12:09:01,604 - email_analysis_ui - INFO - New email file uploaded for analysis.
+2025-02-01 12:24:36,673 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 12:24:36,673 - MySecretLogger - INFO - VIRUS_TOTAL_ENDPOINT: Obtained
+2025-02-01 12:24:36,673 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 12:24:36,673 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 12:24:36,673 - MySecretLogger - INFO - VIRUS_TOTAL_KEY: Obtained
+2025-02-01 12:24:37,357 - Home.py - INFO - User accessed the Overview section.

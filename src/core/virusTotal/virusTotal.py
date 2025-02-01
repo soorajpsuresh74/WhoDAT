@@ -5,8 +5,8 @@ from WhoDATLogger import setup_logger
 
 logger = setup_logger("VirusTotalLogger")
 
-VT_FILE_UPLOAD_ENDPOINT = "https://www.virustotal.com/api/v3/files"
-VT_ANALYSIS_ENDPOINT = "https://www.virustotal.com/api/v3/analyses"
+VT_FILE_UPLOAD_ENDPOINT = config.MySecret.VT_FILE_UPLOAD_ENDPOINT
+VT_ANALYSIS_ENDPOINT = config.MySecret.VT_ANALYSIS_ENDPOINT
 VT_URL_SCAN_ENDPOINT = config.MySecret.VIRUS_TOTAL_ENDPOINT
 
 headers = {
