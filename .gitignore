@@ -1,3 +1,5 @@
 .venv
 .env
 data
+!sample.env
+app.log
