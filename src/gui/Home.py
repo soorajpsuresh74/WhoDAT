@@ -1,11 +1,13 @@
 import streamlit as st
 
 from WhoDATLogger import setup_logger
+from src.gui.Dmarc import dmarc_analysis_ui
 from src.gui.attachmentAnalysisUI import attachment_analysis_ui
 from src.gui.emailAnalysisUI import email_analysis_ui
 from src.gui.ipAnalysisUI import ip_analysis_ui
 from src.gui.urlAnalysisUI import url_analysis_ui
 from src.gui.websiteAnalysisUI import website_analysis_ui
+from src.gui.whoIsScan import whois_analysis_ui
 
 logger = setup_logger("Home.py")
 
@@ -52,10 +54,10 @@ elif app_mode == "Website Analysis":
     website_analysis_ui()
 
 elif app_mode == "Whois Analysis":
-    pass
+    whois_analysis_ui()
 
 elif app_mode == "DMARC Analysis":
-    pass
+    dmarc_analysis_ui()
 
 
 

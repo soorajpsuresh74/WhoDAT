@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94baeefe-f19c-490d-88d3-ab6887df43c8" name="Changes" comment="LICENSE added">
+    <list default="true" id="94baeefe-f19c-490d-88d3-ab6887df43c8" name="Changes" comment="website analysis is added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/URLScanIO/wesiteAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/URLScanIO/wesiteAnalysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/emailAnalysis/email_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/emailAnalysis/email_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/emailAnalysis/ipAddressAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/emailAnalysis/ipAddressAnalysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/virusTotal/virusTotal.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/virusTotal/virusTotal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/emailAnalysisUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/emailAnalysisUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ipAnalysisUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ipAnalysisUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/urlAnalysisUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/urlAnalysisUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/websiteAnalysisUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/websiteAnalysisUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,17 +55,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "Python.setup.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/sooraj.ps/PycharmProjects/ReportAggregator"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.setup.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sooraj.ps/PycharmProjects/ReportAggregator&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\bornd\Desktop\WhoDAT\assets\images" />
@@ -202,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738393739453</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="website analysis is added">
+      <option name="closed" value="true" />
+      <created>1738395653861</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738395653861</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,14 +239,15 @@
     <MESSAGE value="sample env is added" />
     <MESSAGE value="secrets fixed" />
     <MESSAGE value="LICENSE added" />
-    <option name="LAST_COMMIT_MESSAGE" value="LICENSE added" />
+    <MESSAGE value="website analysis is added" />
+    <option name="LAST_COMMIT_MESSAGE" value="website analysis is added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/core/emailAnalysis/email_analysis.py</url>
-          <line>46</line>
+          <line>74</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

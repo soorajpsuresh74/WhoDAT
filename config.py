@@ -21,3 +21,5 @@ class MySecret:
     logger.info(f"VIRUS_TOTAL_KEY: {'Obtained' if URLSCANIO_API_KEY != 'Endpoint not obtained' else 'Not obtained'}")
     URLSCANIO_ENDPOINT = os.getenv("URLSCANIO_ENDPOINT", 'Endpoint not obtained')
     logger.info(f"VIRUS_TOTAL_KEY: {'Obtained' if URLSCANIO_ENDPOINT != 'Endpoint not obtained' else 'Not obtained'}")
+    VIRUS_TOTAL_IP_ENDPOINT   = os.getenv("VIRUS_TOTAL_IP_ENDPOINT", 'Endpoint not obtained')
+    logger.info(f"VIRUS_TOTAL_KEY: {'Obtained' if VIRUS_TOTAL_IP_ENDPOINT  != 'Endpoint not obtained' else 'Not obtained'}")
