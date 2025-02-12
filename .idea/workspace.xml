@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94baeefe-f19c-490d-88d3-ab6887df43c8" name="Changes" comment="website analysis is added">
+    <list default="true" id="94baeefe-f19c-490d-88d3-ab6887df43c8" name="Changes" comment="New Features, fixed sample env">
+      <change afterPath="$PROJECT_DIR$/src/cli/baseMode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/URLScanIO/wesiteAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/URLScanIO/wesiteAnalysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/emailAnalysis/email_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/emailAnalysis/email_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/emailAnalysis/ipAddressAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/emailAnalysis/ipAddressAnalysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/virusTotal/virusTotal.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/virusTotal/virusTotal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Home.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/emailAnalysisUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/emailAnalysisUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ipAnalysisUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ipAnalysisUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/urlAnalysisUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/urlAnalysisUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/websiteAnalysisUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/websiteAnalysisUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,30 +63,12 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\bornd\Desktop\WhoDAT\assets\images" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sooraj.ps\PycharmProjects\WhoDAT\src\cli" />
+      <recent name="C:\Users\sooraj.ps\PycharmProjects\WhoDAT\src\core\emailAnalysis" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.setup">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="WhoDAT" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="WhoDAT" />
       <option name="ENV_FILES" value="" />
@@ -119,7 +94,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.setup" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +193,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738395653861</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="New f=Features added">
+      <option name="closed" value="true" />
+      <created>1739359247396</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1739359247397</updated>
+    </task>
+    <task id="LOCAL-00012" summary="New Features, fixed sample env">
+      <option name="closed" value="true" />
+      <created>1739359741879</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1739359741879</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,7 +230,9 @@
     <MESSAGE value="secrets fixed" />
     <MESSAGE value="LICENSE added" />
     <MESSAGE value="website analysis is added" />
-    <option name="LAST_COMMIT_MESSAGE" value="website analysis is added" />
+    <MESSAGE value="New f=Features added" />
+    <MESSAGE value="New Features, fixed sample env" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Features, fixed sample env" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
