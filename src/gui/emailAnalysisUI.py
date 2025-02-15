@@ -22,21 +22,22 @@ def email_analysis_ui():
 
             # 📌 Display Metadata
             st.write("### 📝 Email Metadata")
-            st.json(analysis_result["Metadata"])
+            st.json(analysis_result.get("Metadata", {}))
 
             # 📌 Display Sender Domain Classification
             st.write("### 🔍 Sender Domain Status")
-            st.info(f"**Sender Domain Classification:** {analysis_result['Sender Domain Status']}")
+            st.info(f"**Sender Domain Classification:** {analysis_result.get('Sender Domain Status', 'Unknown')}")
 
             # 📌 Display Extracted Links & Scan them using VirusTotal
-            if analysis_result["Links"]:
+            links = analysis_result.get("Links", [])
+            if links:
                 st.write("### 🔗 Extracted Links")
-                for link in analysis_result["Links"]:
+                for link in links:
                     st.markdown(f"- [{link}]({link})")
 
                 try:
-                    logger.info(f"Scanning email links: {analysis_result['Links']}")
-                    vt_result = virus_total(analysis_result["Links"])
+                    logger.info(f"Scanning email links: {links}")
+                    vt_result = virus_total(links)
                     st.write("### 🦠 VirusTotal Scan Results")
                     st.json(vt_result)
                 except Exception as e:
@@ -46,10 +47,10 @@ def email_analysis_ui():
                 st.info("No links found in the email.")
 
             # 📌 Display Attachments with Download Option
-            if analysis_result["Attachments"]:
-                st.write("### 📎 Email Attachments")
-                for attachment in email_analysis.attachments:
-                    filename, content = attachment
+            attachments = analysis_result.get("Attachments", [])
+            if attachments:
+                st.write("### 💎 Email Attachments")
+                for filename, content in attachments:
                     st.download_button(
                         label=f"Download {filename}",
                         data=content,
@@ -59,8 +60,24 @@ def email_analysis_ui():
             else:
                 st.info("No attachments found.")
 
+            # 📌 Display Sender Domain Status
+            domain_status = analysis_result.get("Sender Domain Status")
+            if domain_status:
+                st.write("### 📝 Sender Domain Status")
+                st.info(f"Domain Status: {domain_status}")
+            else:
+                st.info("No domain status found.")
+
+            # 📌 Display Spam Prediction
+            spam_prediction = analysis_result.get("Spam Prediction")
+            if spam_prediction:
+                st.write("### 📉 Spam Prediction")
+                st.success(f"**Prediction:** {spam_prediction}")
+            else:
+                st.info("No spam prediction available.")
+
             # 📌 Download Full Analysis as JSON
-            st.write("### 📥 Export Analysis")
+            st.write("### 💽 Export Analysis")
             st.download_button(
                 label="Download Full Analysis as JSON",
                 data=json.dumps(analysis_result, indent=4),

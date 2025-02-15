@@ -24,7 +24,7 @@ async def base_mode():
             email_analysis_cli()
         elif choice == '8':
             print("🚪 Exiting WhoDAT... Goodbye! 👋")
-            break  # Exit the loop
+            break
         else:
             print("⚠️ Invalid choice. Please enter a number between 1 and 8.")
 

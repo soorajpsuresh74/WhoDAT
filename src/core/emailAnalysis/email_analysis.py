@@ -1,8 +1,9 @@
 import email
 from email import policy
 import re
-import requests
 from io import BytesIO
+
+from src.core.emailAnalysis.MachineLearning.soamHamPredictor import predict_email
 
 # List of free email domains (example)
 FREE_EMAIL_PROVIDERS = {"gmail.com", "yahoo.com", "outlook.com", "hotmail.com", "aol.com"}
@@ -78,6 +79,9 @@ class EmailAnalysis:
             sender_domain = get_email_domain(self.metadata.get("From", ""))
             self.domain_status = check_domain_status(sender_domain) if sender_domain else "Unknown"
 
+            # Predict if the email is spam or ham
+            self.prediction = predict_email(self.content)
+
     def get_analysis(self):
         """Returns a structured email analysis result."""
         return {
@@ -85,5 +89,6 @@ class EmailAnalysis:
             "Content": self.content[:500] + "..." if len(self.content) > 500 else self.content,
             "Links": self.links,
             "Attachments": [name for name, _ in self.attachments],
-            "Sender Domain Status": self.domain_status
+            "Sender Domain Status": self.domain_status,
+            "Spam Prediction": self.prediction
         }
