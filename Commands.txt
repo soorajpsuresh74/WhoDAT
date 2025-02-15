@@ -1,0 +1,3 @@
+docker build -t who_dat_app .
+docker run -d -p 5000:5000 -e APP_MODE=gui --name gui_container who_dat_app
+docker run -d -p 5001:5001 -e APP_MODE=cli --name cli_container who_dat_app
