@@ -1,0 +1,6 @@
+app/__pycache__
+app/.idea
+app/.wslenv
+app/.env
+ui/node_modules
+ui/.env
