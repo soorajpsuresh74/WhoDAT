@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Health Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #status {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .ok {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Backend Health Status</h1>
+    <p id="status">Checking...</p>
+
+    <script>
+        async function checkHealth() {
+            try {
+                const response = await fetch("/api/health");
+                const data = await response.json();
+                const statusEl = document.getElementById("status");
+
+                if (response.ok && data.status === "healthy") {
+                    statusEl.textContent = "Backend is Healthy ✅";
+                    statusEl.className = "ok";
+                } else {
+                    throw new Error("Unhealthy");
+                }
+            } catch (error) {
+                document.getElementById("status").textContent = "Backend is Down ❌";
+                document.getElementById("status").className = "error";
+            }
+        }
+
+        // Check health every 5 seconds
+        setInterval(checkHealth, 5000);
+        checkHealth();
+    </script>
+</body>
+</html>
