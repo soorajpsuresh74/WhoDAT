@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Analysis</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Email Analysis</a>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <h2 class="text-center">Analyze Your Emails</h2>
+          <form id="emailAnalysisForm" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="emailFile" class="form-label"
+                >Upload Email File</label
+              >
+              <input
+                type="file"
+                class="form-control"
+                id="emailFile"
+                accept=".txt,.eml"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Analyze</button>
+          </form>
+          <div id="analysisResult" class="mt-4"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("emailAnalysisForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+          let fileInput = document.getElementById("emailFile");
+          let resultDiv = document.getElementById("analysisResult");
+
+          if (fileInput.files.length === 0) {
+            resultDiv.innerHTML =
+              '<div class="alert alert-warning">Please upload an email file.</div>';
+            return;
+          }
+
+          let formData = new FormData();
+          formData.append("emailFile", fileInput.files[0]);
+
+          try {
+            let response = await fetch("/upload-email", {
+              method: "POST",
+              body: formData,
+            });
+
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+
+            let data = await response.json();
+
+            let fastApiResponse = await fetch("/analyze-email", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ filename: data.filename }),
+            });
+
+            if (!fastApiResponse.ok) {
+              throw new Error("FastAPI response was not ok");
+            }
+
+            let result = await fastApiResponse.json();
+            resultDiv.innerHTML = `
+    <div class="alert alert-success">
+        <h4>Analysis Result</h4>
+        <p><strong>Filename:</strong> ${result.Filename}</p>
+        <p><strong>Headers:</strong> <pre>${JSON.stringify(
+          result.Headers,
+          null,
+          2
+        )}</pre></p>
+        <p><strong>Digests:</strong> <pre>${JSON.stringify(
+          result.Digests,
+          null,
+          2
+        )}</pre></p>
+        <p><strong>Links:</strong> <pre>${JSON.stringify(
+          result.Links,
+          null,
+          2
+        )}</pre></p>
+        <p><strong>Attachments:</strong> <pre>${JSON.stringify(
+          result.Attachments,
+          null,
+          2
+        )}</pre></p>
+    </div>
+`;
+          } catch (error) {
+            resultDiv.innerHTML =
+              '<div class="alert alert-danger">Error analyzing the email. Please try again.</div>';
+          }
+        });
+    </script>
+  </body>
+</html>
