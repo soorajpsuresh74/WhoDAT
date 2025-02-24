@@ -1,0 +1,117 @@
+2025-02-24 11:21:12,505 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 11:21:13,132 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 11:21:32,127 - INFO - Scanning link: aas | URL: https://www.virustotal.com/api/v3/urls/YWFz
+2025-02-24 11:21:33,237 - WARNING - Failed to scan aas: {'status': False, 'link': 'aas', 'error': 'Error: 404', 'response': {'error': {'code': 'NotFoundError', 'message': 'URL "YWFz" not found'}}}
+2025-02-24 11:21:33,258 - INFO - Scanning link: aas | URL: https://www.virustotal.com/api/v3/urls/YWFz
+2025-02-24 11:21:33,804 - WARNING - Failed to scan aas: {'status': False, 'link': 'aas', 'error': 'Error: 404', 'response': {'error': {'code': 'NotFoundError', 'message': 'URL "YWFz" not found'}}}
+2025-02-24 11:21:33,809 - INFO - Scanning link: aas | URL: https://www.virustotal.com/api/v3/urls/YWFz
+2025-02-24 11:21:34,351 - WARNING - Failed to scan aas: {'status': False, 'link': 'aas', 'error': 'Error: 404', 'response': {'error': {'code': 'NotFoundError', 'message': 'URL "YWFz" not found'}}}
+2025-02-24 11:21:34,355 - INFO - Scanning link: aas | URL: https://www.virustotal.com/api/v3/urls/YWFz
+2025-02-24 11:21:35,050 - WARNING - Failed to scan aas: {'status': False, 'link': 'aas', 'error': 'Error: 404', 'response': {'error': {'code': 'NotFoundError', 'message': 'URL "YWFz" not found'}}}
+2025-02-24 11:22:40,984 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 11:22:51,531 - INFO - Scanning link: aas | URL: https://www.virustotal.com/api/v3/urls/YWFz
+2025-02-24 11:22:52,217 - WARNING - Failed to scan aas: {'status': False, 'link': 'aas', 'error': 'Error: 404', 'response': {'error': {'code': 'NotFoundError', 'message': 'URL "YWFz" not found'}}}
+2025-02-24 11:22:52,447 - INFO - Scanning link: aas | URL: https://www.virustotal.com/api/v3/urls/YWFz
+2025-02-24 11:22:52,992 - WARNING - Failed to scan aas: {'status': False, 'link': 'aas', 'error': 'Error: 404', 'response': {'error': {'code': 'NotFoundError', 'message': 'URL "YWFz" not found'}}}
+2025-02-24 12:05:44,778 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:08:37,420 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:09:18,537 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:12:00,521 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:18:44,052 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:26:08,689 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:27:12,195 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:28:05,742 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:33:14,658 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:35:25,947 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:36:11,934 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:37:56,832 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:48:50,801 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:50:33,915 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:52:05,077 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 12:52:05,699 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 13:04:22,633 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-24 13:13:47,636 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/

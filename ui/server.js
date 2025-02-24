@@ -9,6 +9,7 @@ const healthRoutes = require("./routes/healthRoutes");
 const ipRoutes = require("./routes/ipRoutes");
 const urlRoutes = require("./routes/urlRoutes");
 const websiteRoutes = require("./routes/websiteRoutes");
+const dmarcRoutes = require("./routes/dmarcRoutes");
 
 const app = express();
 
@@ -36,6 +37,7 @@ app.use(healthRoutes);
 app.use(ipRoutes);
 app.use(urlRoutes);
 app.use(websiteRoutes);
+app.use(dmarcRoutes);
 
 app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, "Template", "404.html"));
