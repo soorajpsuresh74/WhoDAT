@@ -1,0 +1,189 @@
+Delivered-To: soorajpsuresh74@gmail.com
+Received: by 2002:a8a:ecb:0:b0:587:142d:31bd with SMTP id u11csp661286ocw;
+        Wed, 12 Feb 2025 02:28:25 -0800 (PST)
+X-Received: by 2002:a05:6402:268e:b0:5d0:c697:1f02 with SMTP id 4fb4d7f45d1cf-5deadd9d2b4mr6353724a12.17.1739356104829;
+        Wed, 12 Feb 2025 02:28:24 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1739356104; cv=none;
+        d=google.com; s=arc-20240605;
+        b=f8kjtyX31IWUZdC+noRR7e7bXADNyQ80ypHJhjL/twls10ZyX9bSOCZg+Qey6LGXUl
+         6YE+cPzozE97ea6KXHJp+N11+BIy3mNCYGewaOYLQ20Ujyd/JVpFIP4U983xufaUQYED
+         OcayblSdmI0CS8LggPyslHAfDvSwpPueXcjbUtIgk91xKd2/uaYLfoXiPLQRt1OrqD1x
+         KUOyje+5KOa2cW3aZZ0ypNp/6lVff0380S0YCfqTKoU3SW9Fwwy4hrXpVzb2icRZyuyY
+         DSraeqDRGrLJhosk/UAFAHLmiJHY6SwtgAHBzDQ6mNyIrLi36SNSrXsQuszvBrK4xt3I
+         AJvA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=BjpB+0ncheHnqYITDjNx5vxET+8IJwUt91qx+YAxvpc=;
+        fh=cPX6gBBKuKocBUadHgDFDlzTJ7ZfXe1raCOxwpJpjXk=;
+        b=W05+aTkiPN1szp5xp/aZffXoCZFe90jBSdpCoOlA68W48EfcRx6JaMay30aCPtS+HH
+         fd5MU+ornOXD7oPj7fp6FHWzCzfKH005n9882RnRL5WY8OpFKAz4LQI98hARN4TFjfwf
+         uaJKsdjoJEIorlgrtfvsgdyJFruthg7o/WjPsDbZAEkuixLAm6AAopYoHbKnAyJL37uq
+         N8PkMhqVTR1NXeZ8Oy3ObMU8xqT7FbOtjzegIvKXDx0w9XRXg2W/WyoLFc/BW1LGHQjO
+         tbic7wIZMHyzzQ5KfrDTc+pl1TB3a3e33MUHdlhq9i+RP/6vzJ7oYy3Q5jfmR2egci8P
+         WARg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ZsF30U2z;
+       spf=pass (google.com: domain of borndemonhood@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=borndemonhood@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <borndemonhood@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 4fb4d7f45d1cf-5de5cd4b2dfsor3459229a12.7.2025.02.12.02.28.24
+        for <soorajpsuresh74@gmail.com>
+        (Google Transport Security);
+        Wed, 12 Feb 2025 02:28:24 -0800 (PST)
+Received-SPF: pass (google.com: domain of borndemonhood@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=ZsF30U2z;
+       spf=pass (google.com: domain of borndemonhood@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=borndemonhood@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1739356104; x=1739960904; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=BjpB+0ncheHnqYITDjNx5vxET+8IJwUt91qx+YAxvpc=;
+        b=ZsF30U2zKDn5Enrle30zZLZZCi88pPCHL4kIPs6C8N0ihMub95wjq8EfAN9LNbxBqW
+         kgLmosJR94KEy4cMcUHLn6lI7OjgkDOMQDPF6X5+J9bN+zPxgD5dDHB4c5jI4DDuOyfe
+         QfmD4x58eJSrGroRrXxFkUw7M7XgYupE7psnz9B7CDaraLupIdotIiqUl+IjswnGykS0
+         Bwf/6XsI0clqNjVnabsM1nuoQHlF5vaBqtxDmWHTFWxi5ATpUv8R/nIXzQ0qSUGKxmxd
+         UKAH61suER8EAdhFtS55zaWsp5uiluCIE3TuHtgH8dX3sNw9PwuM5ku6fWBdnuXq/IM/
+         6yJw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1739356104; x=1739960904;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=BjpB+0ncheHnqYITDjNx5vxET+8IJwUt91qx+YAxvpc=;
+        b=vLUq4M3iVq7u+A6MV2DdLbOwXHz/atQPLGUxpYMrjiuNSzfaOKgWB8iTzDAVPAXqM7
+         DC7Ajpa/VrAMPNg9ktj8wsVXxjKhAJMZvhCIErttlkmYNWZiCT2/5PnSsVdtnNdn5aUC
+         eb3LmCTeh59mkNx2eafD0/HruAbDi8aduWfSgAFiVXyvbzVVEqXBUkx1r1edJJQ1ydU9
+         s6lmPDYIYKRTK8DezcZWL6JIkdlkOQ+ANJNy1392+50O4XAzz4JXLJ4qpaIR1tRZVjUD
+         4mfGvo6rJfR1XCY0XwU5ieuaFCgJgnDpgvxkLuqAJAWboDwqlDpq+jdwyGc710I3xqBP
+         MftA==
+X-Gm-Message-State: AOJu0Yx2AH8kZ8RB7aCxv6bp5NGo3nGc43oBZccQO9FoQO3+spojMR+o
+	PdKQvByN70lDsG+2ae9FYfrLyTp60C3lD5D9w3Z829qBB1zGimg/4IwHn6SHX1ZvM6NR63O+3OC
+	sOTBbE2mP8KDaeHFSJxgbQiN3ROEhwA==
+X-Gm-Gg: ASbGncvsduYEt7RxKa4m2bBeqiIqcMi/pe8rL2zV3Dl3OcA2X3mYVFSEv5Drf2nqyzQ
+	dT+CnuU/lL47NEXk+Igu+WoPH3KzvI94ItJGhg/SMcaklNhyvOlYvGe/CFvfWrkUKtkJre+Dexv
+	GTDZZoALaqVTSurbrRD4vsNe88v69b
+X-Google-Smtp-Source: AGHT+IGqfZhm+nImKqMFg5+59FlFaUxcgoR2J3KY0zF7/tXxtnmtcQfjCumYoPYc4el/ByaEjb6zb0pgmtg7iLKr7+g=
+X-Received: by 2002:a05:6402:35cb:b0:5de:bcdf:bf3e with SMTP id
+ 4fb4d7f45d1cf-5debcdfcad6mr39746a12.0.1739356103339; Wed, 12 Feb 2025
+ 02:28:23 -0800 (PST)
+MIME-Version: 1.0
+From: Sooraj <borndemonhood@gmail.com>
+Date: Wed, 12 Feb 2025 15:58:12 +0530
+X-Gm-Features: AWEUYZmi3gGerlkN4xfezDOs_e9kWmObd4oTF_mipXxOxcaD7CCQfz3_qk13_8c
+Message-ID: <CAP4PabnnokPST5vvr-P7pAHS7n-U3fwxL-mzsMro6YGfgoUiWw@mail.gmail.com>
+Subject: 
+To: soorajpsuresh74@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000ad7ab6062def66d9"
+
+--000000000000ad7ab6062def66d9
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+WhoDAT is a GUI-based cybersecurity tool for nerds.
+
+Analyze emails, URLs, headers, IPs, and attachments for threats--using free
+APIs like VirusTotal, Google Safe Browsing, URLScan, and Hybrid
+Analysis.URLScan.ioFeatures
+=F0=9F=8C=90 Domain Analyzer
+Analyze URLs, email addresses, and IP addresses to reveal their threat
+level:
+
+Website Analysis: Search if a website is a known malicious site and take a
+secure screenshot using URLScan.io.
+Email Analysis: Verifies if email domains are free, disposable, or
+associated with suspicious activity.
+URL Analysis: Scans URLs to detect malware, phishing attempts, and
+suspicious redirects.
+IP Address Analysis: Checks if an IP address has been associated with
+previous malicious activity.
+WHOIS Data: Retrieves WHOIS information for domains to confirm registration
+dates, geographical origins, and other key details.
+DMARC Analysis: Check if an email has been potentially spoofed.Header
+Analyzer
+Uncover security issues hidden in email headers:
+
+IP Address Analysis: Extracts originating IPs and determines their
+geographic and ISP origins. IP addresses from outside the US are flagged
+(I'm American - edit the code to change noob).
+SPF, DKIM, and DMARC: Validates authentication records to detect spoofing
+attempts.
+Intermediary Hop Analysis: Identifies intermediate servers through header
+inspection.
+=F0=9F=94=8D Sentiment Analyzer
+Detect phishing and other sus language in email content:
+
+Content Analysis: Scans for urgency cues, suspicious language, and embedded
+links.
+OpenAI Integration: Uses AI to provide a classification score and risk
+assessment based on content indicators.
+=F0=9F=93=8E Attachment Analyzer
+Ensure attachments are safe before opening:
+
+File Scanning: Uploads files to VirusTotal and Hybrid Analysis to see if
+malicious or sus.
+Real-Time Reports: Displays detailed findings from VirusTotal and Hybrid
+Analysis, including detection by antivirus engines and potential threat
+levels.Select Analysis Type: Choose a tab for the type of analysis you want
+to perform:
+
+Domain Analyzer: Enter email or URL for analysis.
+Header Analyzer: Paste email headers for validation.
+Sentiment Analyzer: Paste email content to assess phishing risk.
+Attachment Analyzer: Upload files for malware analysis. Interpret Results:
+Results are presented with color-coded risk indicators, making it easy to
+assess threat levels at a glance.
+
+--000000000000ad7ab6062def66d9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">WhoDAT is a GUI-based cybersecurity tool for nerds.<div d=
+ir=3D"auto"><br></div><div dir=3D"auto">Analyze emails, URLs, headers, IPs,=
+ and attachments for threats--using free APIs like VirusTotal, Google Safe =
+Browsing, URLScan, and Hybrid Analysis.URLScan.ioFeatures</div><div dir=3D"=
+auto">=F0=9F=8C=90 Domain Analyzer</div><div dir=3D"auto">Analyze URLs, ema=
+il addresses, and IP addresses to reveal their threat level:</div><div dir=
+=3D"auto"><br></div><div dir=3D"auto">Website Analysis: Search if a website=
+ is a known malicious site and take a secure screenshot using URLScan.io.</=
+div><div dir=3D"auto">Email Analysis: Verifies if email domains are free, d=
+isposable, or associated with suspicious activity.</div><div dir=3D"auto">U=
+RL Analysis: Scans URLs to detect malware, phishing attempts, and suspiciou=
+s redirects.</div><div dir=3D"auto">IP Address Analysis: Checks if an IP ad=
+dress has been associated with previous malicious activity.</div><div dir=
+=3D"auto">WHOIS Data: Retrieves WHOIS information for domains to confirm re=
+gistration dates, geographical origins, and other key details.</div><div di=
+r=3D"auto">DMARC Analysis: Check if an email has been potentially spoofed.H=
+eader Analyzer</div><div dir=3D"auto">Uncover security issues hidden in ema=
+il headers:</div><div dir=3D"auto"><br></div><div dir=3D"auto">IP Address A=
+nalysis: Extracts originating IPs and determines their geographic and ISP o=
+rigins. IP addresses from outside the US are flagged (I&#39;m American - ed=
+it the code to change noob).</div><div dir=3D"auto">SPF, DKIM, and DMARC: V=
+alidates authentication records to detect spoofing attempts.</div><div dir=
+=3D"auto">Intermediary Hop Analysis: Identifies intermediate servers throug=
+h header inspection.</div><div dir=3D"auto">=F0=9F=94=8D Sentiment Analyzer=
+</div><div dir=3D"auto">Detect phishing and other sus language in email con=
+tent:</div><div dir=3D"auto"><br></div><div dir=3D"auto">Content Analysis: =
+Scans for urgency cues, suspicious language, and embedded links.</div><div =
+dir=3D"auto">OpenAI Integration: Uses AI to provide a classification score =
+and risk assessment based on content indicators.</div><div dir=3D"auto">=F0=
+=9F=93=8E Attachment Analyzer</div><div dir=3D"auto">Ensure attachments are=
+ safe before opening:</div><div dir=3D"auto"><br></div><div dir=3D"auto">Fi=
+le Scanning: Uploads files to VirusTotal and Hybrid Analysis to see if mali=
+cious or sus.</div><div dir=3D"auto">Real-Time Reports: Displays detailed f=
+indings from VirusTotal and Hybrid Analysis, including detection by antivir=
+us engines and potential threat levels.Select Analysis Type: Choose a tab f=
+or the type of analysis you want to perform:</div><div dir=3D"auto"><br></d=
+iv><div dir=3D"auto">Domain Analyzer: Enter email or URL for analysis.</div=
+><div dir=3D"auto">Header Analyzer: Paste email headers for validation.</di=
+v><div dir=3D"auto">Sentiment Analyzer: Paste email content to assess phish=
+ing risk.</div><div dir=3D"auto">Attachment Analyzer: Upload files for malw=
+are analysis. Interpret Results: Results are presented with color-coded ris=
+k indicators, making it easy to assess threat levels at a glance.</div></di=
+v>
+
+--000000000000ad7ab6062def66d9--
