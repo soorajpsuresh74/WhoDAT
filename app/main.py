@@ -8,6 +8,7 @@ from routes.ip_routes import router as ip_router
 from routes.url_routes import router as url_router
 from routes.website_routes import router as website_router
 from routes.dmarc_routes import router as dmarc_router
+from routes.whois_routes import router as whois_router
 
 logging.basicConfig(
     level=logging.INFO,
@@ -31,7 +32,7 @@ app.include_router(ip_router)
 app.include_router(url_router)
 app.include_router(website_router)
 app.include_router(dmarc_router)
-# app.include_router(website_router)
+app.include_router(whois_router)
 
 if __name__ == "__main__":
     logging.info(f"Starting server at {PROTOCOL}://{HOST}:{PORT}")

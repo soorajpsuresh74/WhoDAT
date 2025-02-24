@@ -64,4 +64,11 @@ class MySecret:
     VIRUS_TOTAL_IP_ENDPOINT = os.getenv("VIRUS_TOTAL_IP_ENDPOINT", 'Endpoint not obtained')
     logger.info(f"VIRUS_TOTAL_IP_ENDPOINT: {'Obtained' if VIRUS_TOTAL_IP_ENDPOINT != 'Endpoint not obtained' else 'Not obtained'}")
 
+    IP2LOCATION_API_KEY = os.getenv("ip2location_api_key", 'Endpoint not obtained')
+    logger.info(f"VIRUS_TOTAL_IP_ENDPOINT: {'Obtained' if IP2LOCATION_API_KEY != 'Endpoint not obtained' else 'Not obtained'}")
+
+    IP2LOCATION_API_ENDPOINT = os.getenv("ip2location_api", 'Endpoint not obtained')
+    logger.info(f"VIRUS_TOTAL_IP_ENDPOINT: {'Obtained' if IP2LOCATION_API_ENDPOINT != 'Endpoint not obtained' else 'Not obtained'}")
+
+
 logger.info("Configuration loaded successfully.")
