@@ -15,19 +15,19 @@ router.post("/whois-lookup", async (req, res) => {
     try {
         const { domain } = req.body;
 
-        if (!website) {
-            return res.status(400).json({ error: "Website URL is required" });
+        if (!domain) {
+            return res.status(400).json({ error: "domain is required" });
         }
 
         // Forward request to FastAPI backend
         const response = await axios.post(`${FASTAPI_URL}/analyze-whois`, { domain });
-
+        console.log(response.data)
         res.json(response.data);
     } catch (error) {
-        console.error("❌ Error analyzing website:", error.message);
+        console.error("❌ Error analyzing domain:", error.message);
 
         const status = error.response ? error.response.status : 500;
-        res.status(status).json({ error: "Error analyzing website", details: error.message });
+        res.status(status).json({ error: "Error analyzing domain", details: error.message });
     }
 });
 

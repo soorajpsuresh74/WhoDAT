@@ -55,10 +55,24 @@
                     <div class="alert alert-success">
                         <h4>WHOIS Information</h4>
                         <p><strong>Domain:</strong> ${result.domain}</p>
-                        <p><strong>Registrar:</strong> ${result.registrar}</p>
-                        <p><strong>Creation Date:</strong> ${result.creation_date}</p>
-                        <p><strong>Expiration Date:</strong> ${result.expiration_date}</p>
-                        <p><strong>Owner:</strong> ${result.owner || 'Not Available'}</p>
+                        <p><strong>Domain ID:</strong> ${result.domain_id}</p>
+                        <p><strong>Status:</strong> ${result.status}</p>
+                        <p><strong>Creation Date:</strong> ${result.create_date}</p>
+                        <p><strong>Update Date:</strong> ${result.update_date}</p>
+                        <p><strong>Expiration Date:</strong> ${result.expire_date}</p>
+                        <p><strong>Domain Age:</strong> ${result.domain_age} days</p>
+                        <p><strong>WHOIS Server:</strong> ${result.whois_server}</p>
+                        <h5>Registrar</h5>
+                        <p><strong>Name:</strong> ${result.registrar.name}</p>
+                        <p><strong>URL:</strong> <a href="${result.registrar.url}" target="_blank">${result.registrar.url}</a></p>
+                        <h5>Registrant</h5>
+                        <p><strong>Name:</strong> ${result.registrant.name}</p>
+                        <p><strong>Organization:</strong> ${result.registrant.organization}</p>
+                        <p><strong>Address:</strong> ${result.registrant.street_address}, ${result.registrant.city}, ${result.registrant.region}, ${result.registrant.zip_code}, ${result.registrant.country}</p>
+                        <p><strong>Phone:</strong> ${result.registrant.phone}</p>
+                        <p><strong>Email:</strong> <a href="${result.registrant.email}" target="_blank">Contact</a></p>
+                        <h5>Nameservers</h5>
+                        <ul>${result.nameservers.map(ns => `<li>${ns}</li>`).join('')}</ul>
                     </div>
                 `;
             } catch (error) {
