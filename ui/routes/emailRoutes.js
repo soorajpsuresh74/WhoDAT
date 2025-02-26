@@ -29,6 +29,7 @@ router.post("/upload-email", upload.single("emailFile"), async (req, res) => {
     });
 
     fs.unlinkSync(req.file.path);
+    console.log(response.data)
     res.json(response.data);
   } catch (error) {
     console.error("❌ Error uploading file:", error.message);

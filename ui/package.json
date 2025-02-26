@@ -27,6 +27,7 @@
     "escape-html": "^1.0.3",
     "etag": "^1.8.1",
     "express": "^4.21.2",
+    "express-fileupload": "^1.5.1",
     "finalhandler": "^1.3.1",
     "form-data": "^4.0.2",
     "forwarded": "^0.2.0",

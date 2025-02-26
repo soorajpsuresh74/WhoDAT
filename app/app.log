@@ -135,3 +135,328 @@
  - Analysis: https://www.virustotal.com/api/v3/analyses
  - URL Scan: https://www.virustotal.com/api/v3/urls
  - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 05:19:24,135 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 05:22:02,021 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 05:25:14,084 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 05:45:14,959 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 05:48:26,235 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 05:54:25,647 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 05:54:49,376 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 05:54:55,023 - INFO - ✅ Attachment uploaded: 177dc765-feaf-4763-910b-3e2c9bacfd22_1740462894936-azure.pdf
+2025-02-25 05:54:55,051 - WARNING - ⚠️ File not found: 1740462894936-azure.pdf
+2025-02-25 05:54:55,052 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:04,969 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 05:58:29,568 - INFO - ✅ Attachment uploaded: 5f812b4b-913d-4263-8621-9b7b80434ad4_1740463109483-azure.pdf
+2025-02-25 05:58:29,581 - WARNING - ⚠️ File not found: 1740463109483-azure.pdf
+2025-02-25 05:58:29,582 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:35,861 - INFO - ✅ Attachment uploaded: aaa266e2-d362-440b-9dac-31c9758ba1f3_1740463115774-azure.pdf
+2025-02-25 05:58:35,875 - WARNING - ⚠️ File not found: 1740463115774-azure.pdf
+2025-02-25 05:58:35,875 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:36,050 - INFO - ✅ Attachment uploaded: 5776f44c-3e70-4217-9e65-9c2214b1633d_1740463115980-azure.pdf
+2025-02-25 05:58:36,063 - WARNING - ⚠️ File not found: 1740463115980-azure.pdf
+2025-02-25 05:58:36,063 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:36,243 - INFO - ✅ Attachment uploaded: 6c745309-7541-473d-bfe5-c144c8642673_1740463116133-azure.pdf
+2025-02-25 05:58:36,257 - WARNING - ⚠️ File not found: 1740463116133-azure.pdf
+2025-02-25 05:58:36,257 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:36,363 - INFO - ✅ Attachment uploaded: 208fb2ee-3c75-43c1-b9a5-73d85fb10ca1_1740463116295-azure.pdf
+2025-02-25 05:58:36,416 - WARNING - ⚠️ File not found: 1740463116295-azure.pdf
+2025-02-25 05:58:36,416 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:36,552 - INFO - ✅ Attachment uploaded: 03a84745-e420-4028-950e-4ae8a8992a89_1740463116435-azure.pdf
+2025-02-25 05:58:36,564 - WARNING - ⚠️ File not found: 1740463116435-azure.pdf
+2025-02-25 05:58:36,564 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:36,692 - INFO - ✅ Attachment uploaded: a9152c64-a204-4c3c-96e4-644799e39887_1740463116602-azure.pdf
+2025-02-25 05:58:36,704 - WARNING - ⚠️ File not found: 1740463116602-azure.pdf
+2025-02-25 05:58:36,705 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:36,891 - INFO - ✅ Attachment uploaded: b7a93845-a9dd-408e-b2f6-8b557765eead_1740463116770-azure.pdf
+2025-02-25 05:58:36,905 - WARNING - ⚠️ File not found: 1740463116770-azure.pdf
+2025-02-25 05:58:36,905 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:36,994 - INFO - ✅ Attachment uploaded: 6c9d3609-472a-48eb-ab1b-da23d647a576_1740463116909-azure.pdf
+2025-02-25 05:58:37,046 - WARNING - ⚠️ File not found: 1740463116909-azure.pdf
+2025-02-25 05:58:37,047 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:37,201 - INFO - ✅ Attachment uploaded: d9b085cf-3351-45e1-9c97-09fb18aedc1e_1740463117090-azure.pdf
+2025-02-25 05:58:37,212 - WARNING - ⚠️ File not found: 1740463117090-azure.pdf
+2025-02-25 05:58:37,212 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:37,312 - INFO - ✅ Attachment uploaded: 471cc77b-64b5-4350-b93c-e9746169765a_1740463117235-azure.pdf
+2025-02-25 05:58:37,366 - WARNING - ⚠️ File not found: 1740463117235-azure.pdf
+2025-02-25 05:58:37,366 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:37,476 - INFO - ✅ Attachment uploaded: e09aeda4-6233-4d25-a5d0-55cb81b5cd46_1740463117399-azure.pdf
+2025-02-25 05:58:37,545 - WARNING - ⚠️ File not found: 1740463117399-azure.pdf
+2025-02-25 05:58:37,545 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:37,700 - INFO - ✅ Attachment uploaded: 2c5ea6d7-4ac5-4669-9fab-3ac0214a36b8_1740463117566-azure.pdf
+2025-02-25 05:58:37,711 - WARNING - ⚠️ File not found: 1740463117566-azure.pdf
+2025-02-25 05:58:37,711 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:58:46,308 - INFO - ✅ Attachment uploaded: f16021ef-48fa-4a9f-8532-76f97df7a8a7_1740463126163-azure.pdf
+2025-02-25 05:58:46,328 - WARNING - ⚠️ File not found: 1740463126163-azure.pdf
+2025-02-25 05:58:46,329 - ERROR - ❌ Error analyzing attachment: 404: File not found
+2025-02-25 05:59:58,548 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 06:00:01,696 - INFO - ✅ Attachment uploaded: 4e109774-426c-44cf-be29-b88eb3e4908c_1740463201564-azure.pdf
+2025-02-25 06:00:01,712 - WARNING - ⚠️ File not found: 1740463201564-azure.pdf
+2025-02-25 06:00:01,712 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463201564-azure.pdf
+2025-02-25 06:00:02,252 - INFO - ✅ Attachment uploaded: cc832a12-4d16-4684-8f46-7a55d1501fc2_1740463202178-azure.pdf
+2025-02-25 06:00:02,264 - WARNING - ⚠️ File not found: 1740463202178-azure.pdf
+2025-02-25 06:00:02,264 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463202178-azure.pdf
+2025-02-25 06:00:02,460 - INFO - ✅ Attachment uploaded: cdc18bfa-7bff-4d61-b151-02e639ee6731_1740463202340-azure.pdf
+2025-02-25 06:00:02,472 - WARNING - ⚠️ File not found: 1740463202340-azure.pdf
+2025-02-25 06:00:02,472 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463202340-azure.pdf
+2025-02-25 06:00:02,577 - INFO - ✅ Attachment uploaded: b01d1d65-4c21-4e6b-8768-ec70106f129e_1740463202493-azure.pdf
+2025-02-25 06:00:02,588 - WARNING - ⚠️ File not found: 1740463202493-azure.pdf
+2025-02-25 06:00:02,588 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463202493-azure.pdf
+2025-02-25 06:00:02,737 - INFO - ✅ Attachment uploaded: 63d6b461-20d6-4da6-a656-c5b36a09fed1_1740463202631-azure.pdf
+2025-02-25 06:00:02,753 - WARNING - ⚠️ File not found: 1740463202631-azure.pdf
+2025-02-25 06:00:02,753 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463202631-azure.pdf
+2025-02-25 06:00:02,889 - INFO - ✅ Attachment uploaded: f5bcead3-1b4e-4b47-b6b2-b29246b1abb7_1740463202772-azure.pdf
+2025-02-25 06:00:02,902 - WARNING - ⚠️ File not found: 1740463202772-azure.pdf
+2025-02-25 06:00:02,902 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463202772-azure.pdf
+2025-02-25 06:00:03,037 - INFO - ✅ Attachment uploaded: 0deb91ce-260a-4898-9731-5af771dd7c92_1740463202913-azure.pdf
+2025-02-25 06:00:03,049 - WARNING - ⚠️ File not found: 1740463202913-azure.pdf
+2025-02-25 06:00:03,049 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463202913-azure.pdf
+2025-02-25 06:00:03,125 - INFO - ✅ Attachment uploaded: 8dd1daa2-402f-4046-8904-f2cd33a283fa_1740463203049-azure.pdf
+2025-02-25 06:00:03,198 - WARNING - ⚠️ File not found: 1740463203049-azure.pdf
+2025-02-25 06:00:03,198 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463203049-azure.pdf
+2025-02-25 06:00:03,308 - INFO - ✅ Attachment uploaded: 9eddd731-9f9b-41a4-88b6-cc761b1e2681_1740463203190-azure.pdf
+2025-02-25 06:00:03,377 - WARNING - ⚠️ File not found: 1740463203190-azure.pdf
+2025-02-25 06:00:03,377 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463203190-azure.pdf
+2025-02-25 06:00:03,388 - INFO - ✅ Attachment uploaded: eb37d947-7ea5-443b-b2ea-b84692869a0a_1740463203316-azure.pdf
+2025-02-25 06:00:03,398 - WARNING - ⚠️ File not found: 1740463203316-azure.pdf
+2025-02-25 06:00:03,398 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463203316-azure.pdf
+2025-02-25 06:00:04,790 - INFO - ✅ Attachment uploaded: fc9e584d-5db3-48fc-9b65-cb8bfadea15b_1740463204718-azure.pdf
+2025-02-25 06:00:04,801 - WARNING - ⚠️ File not found: 1740463204718-azure.pdf
+2025-02-25 06:00:04,802 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463204718-azure.pdf
+2025-02-25 06:00:04,999 - INFO - ✅ Attachment uploaded: 21a6743a-ddb3-4ca8-8c7d-06f34b978aa0_1740463204890-azure.pdf
+2025-02-25 06:00:05,010 - WARNING - ⚠️ File not found: 1740463204890-azure.pdf
+2025-02-25 06:00:05,010 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463204890-azure.pdf
+2025-02-25 06:00:05,102 - INFO - ✅ Attachment uploaded: 5ed106e4-c7c0-420f-a6b2-72c496ac0223_1740463205039-azure.pdf
+2025-02-25 06:00:05,154 - WARNING - ⚠️ File not found: 1740463205039-azure.pdf
+2025-02-25 06:00:05,154 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463205039-azure.pdf
+2025-02-25 06:00:05,321 - INFO - ✅ Attachment uploaded: 6071e7dd-e26e-45cc-af86-6352d78a906d_1740463205197-azure.pdf
+2025-02-25 06:00:05,333 - WARNING - ⚠️ File not found: 1740463205197-azure.pdf
+2025-02-25 06:00:05,333 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463205197-azure.pdf
+2025-02-25 06:00:05,481 - INFO - ✅ Attachment uploaded: c0ab70f7-783b-4980-93d3-033fc83fe8c9_1740463205355-azure.pdf
+2025-02-25 06:00:05,493 - WARNING - ⚠️ File not found: 1740463205355-azure.pdf
+2025-02-25 06:00:05,493 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463205355-azure.pdf
+2025-02-25 06:00:05,617 - INFO - ✅ Attachment uploaded: 7429c6e1-bb70-4dd2-92bf-5e3ac94439e8_1740463205512-azure.pdf
+2025-02-25 06:00:05,629 - WARNING - ⚠️ File not found: 1740463205512-azure.pdf
+2025-02-25 06:00:05,629 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463205512-azure.pdf
+2025-02-25 06:00:05,747 - INFO - ✅ Attachment uploaded: d188d21f-b5f5-43e6-bf76-eeb74e1bb46a_1740463205669-azure.pdf
+2025-02-25 06:00:05,758 - WARNING - ⚠️ File not found: 1740463205669-azure.pdf
+2025-02-25 06:00:05,758 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463205669-azure.pdf
+2025-02-25 06:00:05,897 - INFO - ✅ Attachment uploaded: 796292bb-4bb8-4e6f-96f7-4226d0074b82_1740463205826-azure.pdf
+2025-02-25 06:00:05,908 - WARNING - ⚠️ File not found: 1740463205826-azure.pdf
+2025-02-25 06:00:05,908 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463205826-azure.pdf
+2025-02-25 06:00:06,057 - INFO - ✅ Attachment uploaded: e1c1d6e7-3b00-44ed-8125-d4afdabe4854_1740463205985-azure.pdf
+2025-02-25 06:00:06,068 - WARNING - ⚠️ File not found: 1740463205985-azure.pdf
+2025-02-25 06:00:06,068 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463205985-azure.pdf
+2025-02-25 06:00:06,243 - INFO - ✅ Attachment uploaded: b2968198-afd9-4503-8fbd-dd5f83e11b5d_1740463206134-azure.pdf
+2025-02-25 06:00:06,254 - WARNING - ⚠️ File not found: 1740463206134-azure.pdf
+2025-02-25 06:00:06,255 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463206134-azure.pdf
+2025-02-25 06:00:06,367 - INFO - ✅ Attachment uploaded: 6e15f9e9-9bc5-4fbc-8f8a-c9d174482fc7_1740463206290-azure.pdf
+2025-02-25 06:00:06,378 - WARNING - ⚠️ File not found: 1740463206290-azure.pdf
+2025-02-25 06:00:06,379 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463206290-azure.pdf
+2025-02-25 06:00:06,516 - INFO - ✅ Attachment uploaded: 5aadfe9e-02e9-4524-9de3-149bea5a1481_1740463206441-azure.pdf
+2025-02-25 06:00:06,526 - WARNING - ⚠️ File not found: 1740463206441-azure.pdf
+2025-02-25 06:00:06,526 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463206441-azure.pdf
+2025-02-25 06:00:06,698 - INFO - ✅ Attachment uploaded: 12841849-49cb-407a-897e-b186a4adf4e9_1740463206583-azure.pdf
+2025-02-25 06:00:06,710 - WARNING - ⚠️ File not found: 1740463206583-azure.pdf
+2025-02-25 06:00:06,710 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463206583-azure.pdf
+2025-02-25 06:00:06,810 - INFO - ✅ Attachment uploaded: 9f7506e8-7262-4ce8-b9db-2233267f1354_1740463206733-azure.pdf
+2025-02-25 06:00:06,862 - WARNING - ⚠️ File not found: 1740463206733-azure.pdf
+2025-02-25 06:00:06,863 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463206733-azure.pdf
+2025-02-25 06:00:06,953 - INFO - ✅ Attachment uploaded: 842ce536-0e56-41c5-adb5-cbb5de046737_1740463206882-azure.pdf
+2025-02-25 06:00:07,014 - WARNING - ⚠️ File not found: 1740463206882-azure.pdf
+2025-02-25 06:00:07,014 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463206882-azure.pdf
+2025-02-25 06:00:07,097 - INFO - ✅ Attachment uploaded: 75896e42-e0d9-4ade-b8b7-7debc632a5d6_1740463207016-azure.pdf
+2025-02-25 06:00:07,175 - WARNING - ⚠️ File not found: 1740463207016-azure.pdf
+2025-02-25 06:00:07,175 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463207016-azure.pdf
+2025-02-25 06:00:07,222 - INFO - ✅ Attachment uploaded: e3c2f362-9ef0-4ce9-8e8a-27fa5620caae_1740463207158-azure.pdf
+2025-02-25 06:00:07,232 - WARNING - ⚠️ File not found: 1740463207158-azure.pdf
+2025-02-25 06:00:07,232 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463207158-azure.pdf
+2025-02-25 06:00:07,380 - INFO - ✅ Attachment uploaded: 45ae678d-7530-4bed-9011-402e061b55ba_1740463207315-azure.pdf
+2025-02-25 06:00:07,391 - WARNING - ⚠️ File not found: 1740463207315-azure.pdf
+2025-02-25 06:00:07,391 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463207315-azure.pdf
+2025-02-25 06:00:07,522 - INFO - ✅ Attachment uploaded: 2830431b-3df4-46a3-ae7e-560df970fa7e_1740463207459-azure.pdf
+2025-02-25 06:00:07,531 - WARNING - ⚠️ File not found: 1740463207459-azure.pdf
+2025-02-25 06:00:07,531 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463207459-azure.pdf
+2025-02-25 06:00:07,756 - INFO - ✅ Attachment uploaded: e9373fb5-eac4-452a-bf97-8f60b86da1bb_1740463207615-azure.pdf
+2025-02-25 06:00:07,786 - WARNING - ⚠️ File not found: 1740463207615-azure.pdf
+2025-02-25 06:00:07,787 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463207615-azure.pdf
+2025-02-25 06:00:07,869 - INFO - ✅ Attachment uploaded: 0e8682c8-2d32-4dc8-85ec-713672f4f437_1740463207760-azure.pdf
+2025-02-25 06:00:07,882 - WARNING - ⚠️ File not found: 1740463207760-azure.pdf
+2025-02-25 06:00:07,882 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463207760-azure.pdf
+2025-02-25 06:00:07,979 - INFO - ✅ Attachment uploaded: 3723ed4b-6443-46ac-a913-bafa4da4fa78_1740463207906-azure.pdf
+2025-02-25 06:00:08,040 - WARNING - ⚠️ File not found: 1740463207906-azure.pdf
+2025-02-25 06:00:08,040 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463207906-azure.pdf
+2025-02-25 06:00:08,159 - INFO - ✅ Attachment uploaded: 3684799d-5f64-4823-9985-cf7399b928e6_1740463208058-azure.pdf
+2025-02-25 06:00:08,171 - WARNING - ⚠️ File not found: 1740463208058-azure.pdf
+2025-02-25 06:00:08,172 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740463208058-azure.pdf
+2025-02-25 06:27:59,261 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 06:27:59,904 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 06:28:26,673 - INFO - ✅ Attachment uploaded: b2ec0506-8680-414d-9670-982a85851ad6_1740464906518-azure.pdf
+2025-02-25 06:28:26,728 - WARNING - ⚠️ File not found: 1740464906518-azure.pdf
+2025-02-25 06:28:26,729 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740464906518-azure.pdf
+2025-02-25 06:30:27,947 - INFO - ✅ Attachment uploaded: 925decd9-ca45-4f00-b6ed-a22749768524_1740465027852-azure.pdf
+2025-02-25 06:30:27,962 - WARNING - ⚠️ File not found: 1740465027852-azure.pdf
+2025-02-25 06:30:27,963 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740465027852-azure.pdf
+2025-02-25 06:30:29,029 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 06:30:33,370 - INFO - ✅ Attachment uploaded: f90151c1-ef98-45db-bd18-083e9e789467_1740465033281-azure.pdf
+2025-02-25 06:30:33,385 - WARNING - ⚠️ File not found: 1740465033281-azure.pdf
+2025-02-25 06:30:33,385 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740465033281-azure.pdf
+2025-02-25 06:30:50,258 - INFO - ✅ Attachment uploaded: 0b1cae70-74d8-47fd-9f9c-2efe6f372871_1740465050165-azure.pdf
+2025-02-25 06:30:50,269 - WARNING - ⚠️ File not found: 1740465050165-azure.pdf
+2025-02-25 06:30:50,269 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740465050165-azure.pdf
+2025-02-25 06:30:51,264 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 06:30:54,333 - INFO - ✅ Attachment uploaded: a60d0ad4-a5ba-4121-907e-6b013254a1fb_1740465054252-azure.pdf
+2025-02-25 06:30:54,348 - WARNING - ⚠️ File not found: 1740465054252-azure.pdf
+2025-02-25 06:30:54,348 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740465054252-azure.pdf
+2025-02-25 06:32:16,549 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 06:39:27,780 - INFO - ✅ Attachment uploaded: fdc31b47-d725-41dd-9c84-51361bbeda74_1740465567706-azure.pdf
+2025-02-25 06:39:27,794 - WARNING - ⚠️ File not found: 1740465567706-azure.pdf
+2025-02-25 06:39:27,795 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740465567706-azure.pdf
+2025-02-25 06:39:30,460 - INFO - ✅ Attachment uploaded: f43c32e7-7d4f-4555-846b-ad24f987ab21_1740465570338-azure.pdf
+2025-02-25 06:39:30,482 - WARNING - ⚠️ File not found: 1740465570338-azure.pdf
+2025-02-25 06:39:30,482 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740465570338-azure.pdf
+2025-02-25 06:39:35,625 - INFO - ✅ Attachment uploaded: b1502d26-818d-48eb-b725-4b048ebd0ef2_1740465575523-azure.pdf
+2025-02-25 06:39:35,640 - WARNING - ⚠️ File not found: 1740465575523-azure.pdf
+2025-02-25 06:39:35,640 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740465575523-azure.pdf
+2025-02-25 06:40:00,883 - ERROR - ❌ Error uploading attachment: [Errno 2] No such file or directory: 'uploads/ed6e8633-1d31-4a22-bc89-105ae5dfe1ef_1740465600699-azure.pdf'
+2025-02-25 06:40:23,191 - ERROR - ❌ Error uploading attachment: [Errno 2] No such file or directory: 'uploads/df67ad91-2d12-4fc7-bd51-7e239c87095a_1740465623081-azure.pdf'
+2025-02-25 06:40:42,619 - ERROR - ❌ Error uploading attachment: [Errno 2] No such file or directory: 'uploads/b9210931-7f3b-413e-9efd-ed622ab3986b_1740465642468-azure.pdf'
+2025-02-25 06:40:46,826 - INFO - ✅ Attachment uploaded: 9e2dfbd4-81c0-4b9f-ac82-907437e55aad_1740465646608-azure.pdf
+2025-02-25 06:40:48,929 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 06:40:49,026 - WARNING - ⚠️ File not found: 1740465646608-azure.pdf
+2025-02-25 06:40:49,027 - ERROR - ❌ Error analyzing attachment: 404: File not found: 1740465646608-azure.pdf
+2025-02-25 08:57:52,671 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 08:57:53,387 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 09:03:36,125 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 09:41:56,471 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 09:41:57,049 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 09:43:38,424 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 09:44:13,293 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 09:47:25,980 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 09:47:26,119 - INFO - ✅ File stored successfully: af93f9d6386658d963a182c4fddd2a07
+2025-02-25 09:50:12,787 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-25 09:50:14,984 - INFO - 📂 File saved: fdf6ea40e542b8e2a8fced7c1b70ac92
+2025-02-25 09:54:30,369 - INFO - 📤 Uploading file: fdf6ea40e542b8e2a8fced7c1b70ac92
+2025-02-25 09:54:46,177 - INFO - ✅ File uploaded successfully. Analysis ID: ZTE4Yjg4ZDc1MDU4YjQ0MDI3MWQ4YzdmY2ZiYWJjYmM6MTc0MDQ3NzI4NQ==
+2025-02-25 09:54:46,902 - INFO - ✅ Analysis Report: {'malicious': 0, 'suspicious': 0, 'undetected': 0, 'harmless': 0, 'timeout': 0, 'confirmed-timeout': 0, 'failure': 0, 'type-unsupported': 0}
+2025-02-25 09:54:46,903 - INFO - 🔍 Analysis completed for fdf6ea40e542b8e2a8fced7c1b70ac92
+2025-02-26 06:05:53,970 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-26 06:05:54,564 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-02-26 06:52:50,878 - INFO - 📂 File saved: azure.pdf
+2025-02-26 06:55:38,400 - INFO - 📂 File saved: azure.pdf
+2025-02-26 06:55:53,148 - INFO - 📂 File saved: azure.pdf
+2025-02-26 06:55:56,448 - INFO - 📤 Uploading file: azure.pdf
+2025-02-26 06:56:00,313 - INFO - ✅ File uploaded successfully. Analysis ID: ZTE4Yjg4ZDc1MDU4YjQ0MDI3MWQ4YzdmY2ZiYWJjYmM6MTc0MDU1Mjk1OQ==
+2025-02-26 06:56:01,050 - INFO - ✅ Analysis Report: {'malicious': 0, 'suspicious': 0, 'undetected': 0, 'harmless': 0, 'timeout': 0, 'confirmed-timeout': 0, 'failure': 0, 'type-unsupported': 0}
+2025-02-26 06:56:01,051 - INFO - 🔍 Analysis completed for azure.pdf
+2025-02-26 06:56:01,057 - INFO - 📤 Uploading file: azure.pdf
+2025-02-26 06:56:04,648 - INFO - ✅ File uploaded successfully. Analysis ID: ZTE4Yjg4ZDc1MDU4YjQ0MDI3MWQ4YzdmY2ZiYWJjYmM6MTc0MDU1Mjk1OQ==
+2025-02-26 06:56:05,266 - INFO - ✅ Analysis Report: {'malicious': 0, 'suspicious': 0, 'undetected': 0, 'harmless': 0, 'timeout': 0, 'confirmed-timeout': 0, 'failure': 0, 'type-unsupported': 0}
+2025-02-26 06:56:05,268 - INFO - 🔍 Analysis completed for azure.pdf
+2025-02-26 06:56:05,273 - INFO - 📤 Uploading file: azure.pdf
+2025-02-26 06:56:08,609 - INFO - ✅ File uploaded successfully. Analysis ID: ZTE4Yjg4ZDc1MDU4YjQ0MDI3MWQ4YzdmY2ZiYWJjYmM6MTc0MDU1Mjk1OQ==
+2025-02-26 06:56:09,119 - INFO - ✅ Analysis Report: {'malicious': 0, 'suspicious': 0, 'undetected': 0, 'harmless': 0, 'timeout': 0, 'confirmed-timeout': 0, 'failure': 0, 'type-unsupported': 0}
+2025-02-26 06:56:09,120 - INFO - 🔍 Analysis completed for azure.pdf

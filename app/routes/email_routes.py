@@ -14,7 +14,7 @@ router = APIRouter()
 class AnalyzeRequest(BaseModel):
     filename: str
 
-@router.post("/upload-email")
+@router.post("/uploads-email")
 async def upload_email(file: UploadFile = File(...)):
     try:
         file_path = os.path.join(UPLOAD_DIR, file.filename)
@@ -24,7 +24,7 @@ async def upload_email(file: UploadFile = File(...)):
 
         return {"filename": file.filename, "message": "File uploaded successfully"}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"File upload failed: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"File uploads failed: {str(e)}")
 
 @router.post("/analyze-email")
 def analyze_email(request: AnalyzeRequest):

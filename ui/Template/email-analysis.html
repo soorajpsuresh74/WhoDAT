@@ -21,7 +21,11 @@
       <div class="row">
         <div class="col-md-8 offset-md-2">
           <h2 class="text-center">Analyze Your Emails</h2>
-          <form id="emailAnalysisForm" enctype="multipart/form-data">
+          <form
+            id="emailAnalysisForm"
+            enctype="multipart/form-data"
+            class="p-3 border rounded shadow"
+          >
             <div class="mb-3">
               <label for="emailFile" class="form-label"
                 >Upload Email File</label
@@ -81,31 +85,46 @@
             }
 
             let result = await fastApiResponse.json();
+
             resultDiv.innerHTML = `
-    <div class="alert alert-success">
-        <h4>Analysis Result</h4>
-        <p><strong>Filename:</strong> ${result.Filename}</p>
-        <p><strong>Headers:</strong> <pre>${JSON.stringify(
-          result.Headers,
-          null,
-          2
-        )}</pre></p>
-        <p><strong>Digests:</strong> <pre>${JSON.stringify(
-          result.Digests,
-          null,
-          2
-        )}</pre></p>
-        <p><strong>Links:</strong> <pre>${JSON.stringify(
-          result.Links,
-          null,
-          2
-        )}</pre></p>
-        <p><strong>Attachments:</strong> <pre>${JSON.stringify(
-          result.Attachments,
-          null,
-          2
-        )}</pre></p>
+<div class="alert alert-success p-3 border rounded shadow-sm">
+    <h4 class="text-center">Analysis Result</h4>
+    <div class="mb-3 p-2 bg-light border rounded">
+      <p><strong>Filename:</strong> ${result.Filename || "N/A"}</p>
     </div>
+    <div class="mb-3 p-2 bg-light border rounded">
+      <h5>Headers</h5>
+      <pre class="bg-white p-2 border rounded">${JSON.stringify(
+        result?.Headers?.Data ?? result?.Headers ?? {},
+        null,
+        2
+      )}</pre>
+    </div>
+    <div class="mb-3 p-2 bg-light border rounded">
+      <h5>Digests</h5>
+      <pre class="bg-white p-2 border rounded">${JSON.stringify(
+        result?.Digests?.Data ?? result?.Digests ?? {},
+        null,
+        2
+      )}</pre>
+    </div>
+    <div class="mb-3 p-2 bg-light border rounded">
+      <h5>Links</h5>
+      <pre class="bg-white p-2 border rounded">${JSON.stringify(
+        result?.Links?.Data ?? result?.Links ?? {},
+        null,
+        2
+      )}</pre>
+    </div>
+    <div class="mb-3 p-2 bg-light border rounded">
+      <h5>Attachments</h5>
+      <pre class="bg-white p-2 border rounded">${JSON.stringify(
+        result?.Attachments?.Data ?? result?.Attachments ?? {},
+        null,
+        2
+      )}</pre>
+    </div>
+</div>
 `;
           } catch (error) {
             resultDiv.innerHTML =
