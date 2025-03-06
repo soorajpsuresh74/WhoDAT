@@ -5,7 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WHOIS Lookup</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        .whois-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .whois-section h5 {
+            margin-bottom: 10px;
+        }
+
+        .whois-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .whois-section ul li {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -54,25 +75,34 @@
                 resultDiv.innerHTML = `
                     <div class="alert alert-success">
                         <h4>WHOIS Information</h4>
-                        <p><strong>Domain:</strong> ${result.domain}</p>
-                        <p><strong>Domain ID:</strong> ${result.domain_id}</p>
-                        <p><strong>Status:</strong> ${result.status}</p>
-                        <p><strong>Creation Date:</strong> ${result.create_date}</p>
-                        <p><strong>Update Date:</strong> ${result.update_date}</p>
-                        <p><strong>Expiration Date:</strong> ${result.expire_date}</p>
-                        <p><strong>Domain Age:</strong> ${result.domain_age} days</p>
-                        <p><strong>WHOIS Server:</strong> ${result.whois_server}</p>
-                        <h5>Registrar</h5>
-                        <p><strong>Name:</strong> ${result.registrar.name}</p>
-                        <p><strong>URL:</strong> <a href="${result.registrar.url}" target="_blank">${result.registrar.url}</a></p>
-                        <h5>Registrant</h5>
-                        <p><strong>Name:</strong> ${result.registrant.name}</p>
-                        <p><strong>Organization:</strong> ${result.registrant.organization}</p>
-                        <p><strong>Address:</strong> ${result.registrant.street_address}, ${result.registrant.city}, ${result.registrant.region}, ${result.registrant.zip_code}, ${result.registrant.country}</p>
-                        <p><strong>Phone:</strong> ${result.registrant.phone}</p>
-                        <p><strong>Email:</strong> <a href="${result.registrant.email}" target="_blank">Contact</a></p>
-                        <h5>Nameservers</h5>
-                        <ul>${result.nameservers.map(ns => `<li>${ns}</li>`).join('')}</ul>
+                        <div class="whois-section">
+                            <h5>Domain Information</h5>
+                            <p><strong>Domain:</strong> ${result.domain}</p>
+                            <p><strong>Domain ID:</strong> ${result.domain_id}</p>
+                            <p><strong>Status:</strong> ${result.status}</p>
+                            <p><strong>Creation Date:</strong> ${result.create_date}</p>
+                            <p><strong>Update Date:</strong> ${result.update_date}</p>
+                            <p><strong>Expiration Date:</strong> ${result.expire_date}</p>
+                            <p><strong>Domain Age:</strong> ${result.domain_age} days</p>
+                            <p><strong>WHOIS Server:</strong> ${result.whois_server}</p>
+                        </div>
+                        <div class="whois-section">
+                            <h5>Registrar</h5>
+                            <p><strong>Name:</strong> ${result.registrar.name}</p>
+                            <p><strong>URL:</strong> <a href="${result.registrar.url}" target="_blank">${result.registrar.url}</a></p>
+                        </div>
+                        <div class="whois-section">
+                            <h5>Registrant</h5>
+                            <p><strong>Name:</strong> ${result.registrant.name}</p>
+                            <p><strong>Organization:</strong> ${result.registrant.organization}</p>
+                            <p><strong>Address:</strong> ${result.registrant.street_address}, ${result.registrant.city}, ${result.registrant.region}, ${result.registrant.zip_code}, ${result.registrant.country}</p>
+                            <p><strong>Phone:</strong> ${result.registrant.phone}</p>
+                            <p><strong>Email:</strong> <a href="${result.registrant.email}" target="_blank">Contact</a></p>
+                        </div>
+                        <div class="whois-section">
+                            <h5>Nameservers</h5>
+                            <ul>${result.nameservers.map(ns => `<li>${ns}</li>`).join('')}</ul>
+                        </div>
                     </div>
                 `;
             } catch (error) {

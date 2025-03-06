@@ -7,7 +7,7 @@ const FormData = require("form-data");
 
 const router = express.Router();
 const UPLOADS_DIR = path.join(__dirname, "..", "uploads");
-const FASTAPI_URL = `${process.env.backend_protocol}://${process.env.backend_host}:${process.env.backend_port}`;
+const FASTAPI_URL = `${process.env.backend_protocol}:${process.env.backend_host}:${process.env.backend_port}`;
 
 const upload = multer({ dest: UPLOADS_DIR });
 

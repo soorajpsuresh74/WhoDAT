@@ -1,106 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Attachment Analysis</title>
-  </head>
-  <body>
-    <h1>Attachment Upload and Analysis</h1>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            padding: 20px;
+        }
 
-    <!-- File Upload Form -->
-    <form id="uploadform" enctype="multipart/form-data">
-      <input type="file" id="myFiles" name="files" accept=".pdf,.doc,.docx" multiple />
-      <button type="submit">Upload</button>
-    </form>
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
 
-    <h2 id="status"></h2>
-    <h3 id="message"></h3>
+        .form-container {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
 
-    <!-- Analyze Attachment Form -->
-    <h2>Analyze Uploaded Files</h2>
-    <form id="analyzeForm">
-      <select id="fileSelect">
-        <option value="">Select a file</option>
-      </select>
-      <button type="submit">Analyze</button>
-    </form>
+        .analysis-section {
+            margin-top: 20px;
+        }
 
-    <h3 id="analysisResult"></h3>
+        .analysis-item {
+            margin-bottom: 10px;
+        }
 
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Attachment Analysis</h1>
+            <p>Securely upload and analyze your documents to detect potential threats.</p>
+        </div>
+
+        <div class="image-container">
+            <img src="https://source.unsplash.com/500x300/?security,technology" alt="Secure File Analysis" />
+        </div>
+
+        <div class="form-container">
+            <h2>Upload Your Files</h2>
+            <p>Upload PDF, DOC, or DOCX files for analysis. Our system will inspect them for potential security threats.</p>
+            <form id="uploadform" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="myFiles" class="form-label">Select Files</label>
+                    <input type="file" id="myFiles" name="files" accept=".pdf,.doc,.docx" multiple class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+            <div id="status" class="mt-2"></div>
+            <div id="message" class="mt-2"></div>
+        </div>
+
+        <div class="form-container">
+            <h2>Analyze Uploaded Files</h2>
+            <p>Select an uploaded file and analyze its content for potential risks.</p>
+            <form id="analyzeForm">
+                <div class="mb-3">
+                    <label for="fileSelect" class="form-label">Select a file</label>
+                    <select id="fileSelect" class="form-select">
+                        <option value="">Select a file</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success">Analyze</button>
+            </form>
+            <div id="analysisResult" class="mt-3 analysis-section"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      const form = document.getElementById("uploadform");
-      const analyzeForm = document.getElementById("analyzeForm");
-      const fileSelect = document.getElementById("fileSelect");
+        document.getElementById("uploadform").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const myFiles = document.getElementById("myFiles").files;
+            const formData = new FormData();
+            Array.from(myFiles).forEach((file) => formData.append("files", file));
 
-      // ✅ Upload Files
-      const sendFile = async () => {
-        const myFiles = document.getElementById("myFiles").files;
-        const formData = new FormData();
-
-        // Append all files under the same field name "files"
-        Array.from(myFiles).forEach((file) => {
-          formData.append("files", file);
+            try {
+                const response = await fetch("/upload-attachment", { method: "POST", body: formData });
+                const json = await response.json();
+                if (json.filename) {
+                    const option = document.createElement("option");
+                    option.value = json.filename;
+                    option.textContent = json.filename;
+                    document.getElementById("fileSelect").appendChild(option);
+                }
+                document.getElementById("status").textContent = `Status: ${response.status}`;
+                document.getElementById("message").textContent = `Message: ${json.message}`;
+            } catch (error) {
+                console.error("Error:", error);
+                document.getElementById("message").textContent = "Upload failed.";
+            }
         });
 
-        try {
-          const response = await fetch("/upload-attachment", {
-            method: "POST",
-            body: formData,
-          });
+        document.getElementById("analyzeForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const filename = document.getElementById("fileSelect").value;
+            if (!filename) {
+                alert("Please select a file to analyze!");
+                return;
+            }
 
-          const json = await response.json();
+            try {
+                const response = await fetch("/analyze-attachment", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ filename }),
+                });
+                const json = await response.json();
+                displayAnalysis(json);
+            } catch (error) {
+                console.error("Error:", error);
+                document.getElementById("analysisResult").textContent = "Analysis failed.";
+            }
+        });
 
-          // ✅ Update file dropdown
-          if (json.filename) {
-            const option = document.createElement("option");
-            option.value = json.filename;
-            option.textContent = json.filename;
-            fileSelect.appendChild(option);
-          }
-
-          document.getElementById("status").textContent = `Status: ${response.status}`;
-          document.getElementById("message").textContent = `Message: ${json?.message}`;
-        } catch (error) {
-          console.error("Error:", error);
-          document.getElementById("message").textContent = "Upload failed.";
+        function displayAnalysis(data) {
+            if (!data || !data.analysis || !data.analysis.analysis) {
+                document.getElementById("analysisResult").innerHTML = "<p>Invalid analysis data.</p>";
+                return;
+            }
+            const analysis = data.analysis.analysis;
+            document.getElementById("analysisResult").innerHTML = `
+                <div class="analysis-item"><strong>Message:</strong> ${data.analysis.message}</div>
+                <div class="analysis-item"><strong>Filename:</strong> ${data.filename}</div>
+                <div class="analysis-item"><strong>File:</strong> ${data.analysis.file}</div>
+                <div class="analysis-item"><strong>Malicious:</strong> ${analysis.Malicious}</div>
+                <div class="analysis-item"><strong>Suspicious:</strong> ${analysis.Suspicious}</div>
+                <div class="analysis-item"><strong>Harmless:</strong> ${analysis.Harmless}</div>
+                <div class="analysis-item"><strong>Undetected:</strong> ${analysis.Undetected}</div>
+            `;
         }
-      };
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        sendFile();
-      });
-
-      // ✅ Analyze Selected File
-      const analyzeFile = async () => {
-        const filename = fileSelect.value;
-        if (!filename) {
-          alert("Please select a file to analyze!");
-          return;
-        }
-
-        try {
-          const response = await fetch("/analyze-attachment", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ filename }),
-          });
-
-          const json = await response.json();
-          document.getElementById("analysisResult").textContent = `Analysis: ${JSON.stringify(json)}`;
-        } catch (error) {
-          console.error("Error:", error);
-          document.getElementById("analysisResult").textContent = "Analysis failed.";
-        }
-      };
-
-      analyzeForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        analyzeFile();
-      });
     </script>
-  </body>
+</body>
 </html>

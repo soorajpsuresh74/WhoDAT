@@ -21,6 +21,7 @@ router.post("/analyze-website", async (req, res) => {
 
         // Forward request to FastAPI backend
         const response = await axios.post(`${FASTAPI_URL}/analyze-website`, { website });
+        
 
         res.json(response.data);
     } catch (error) {

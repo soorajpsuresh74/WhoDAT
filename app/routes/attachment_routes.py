@@ -8,6 +8,7 @@ from pydantic import BaseModel
 from config import logger  # Assuming you have a logger setup
 from core.AttachmentAnalysis import virus_total_attachment_analysis
 
+
 # Directory to store uploaded files
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
@@ -49,3 +50,5 @@ async def analyze_attachment(request: AnalyzeAttachmentRequest):
     except Exception as e:
         logger.error(f"❌ Error analyzing attachment: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Error analyzing attachment: {str(e)}")
+
+

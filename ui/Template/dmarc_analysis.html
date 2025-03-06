@@ -5,16 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DMARC Lookup</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        .dmarc-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .dmarc-section h5 {
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            max-width: 150px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .analysis-image {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">DMARC Lookup</a>
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/150" alt="DMARC Lookup Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Email Security</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Network Security</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Web Security</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">File Analysis</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <div class="container mt-4">
+        <div class="image-container">
+            <img src="https://via.placeholder.com/600x300" alt="DMARC Analysis Overview" class="analysis-image">
+            <p class="text-muted">A visualization of DMARC analysis showing email authentication results.</p>
+        </div>
+
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <h2 class="text-center">Check DMARC Record</h2>
@@ -29,6 +77,10 @@
             </div>
         </div>
     </div>
+
+    <footer class="text-center text-white bg-dark p-3 mt-5">
+        &copy; 2025 DMARC Lookup | All Rights Reserved
+    </footer>
 
     <script>
         document.getElementById("dmarcLookupForm").addEventListener("submit", async function (event) {
@@ -51,14 +103,27 @@
                 if (!response.ok) throw new Error("Network error");
 
                 let result = await response.json();
-                resultDiv.innerHTML = `
-                    <div class="alert alert-success">
-                        <h4>DMARC Record</h4>
-                        <p><strong>Domain:</strong> ${result.domain}</p>
-                        <p><strong>DMARC Policy:</strong> ${result.dmarc_policy || 'Not Found'}</p>
-                        <p><strong>DMARC Record:</strong> ${result.dmarc_record || 'No DMARC Record'}</p>
-                    </div>
-                `;
+                if (result.error) {
+                    resultDiv.innerHTML = `<div class="alert alert-danger">${result.error}</div>`;
+                    return;
+                }
+
+                let dmarcRecord = result.dmarc_record;
+                let html = `<div class="alert alert-success"><h4>DMARC Record for ${result.domain}</h4>`;
+
+                if (dmarcRecord) {
+                    html += `<div class="dmarc-section"><h5>Raw DMARC Record</h5><p>${dmarcRecord.raw}</p></div>`;
+                    delete dmarcRecord.raw;
+                    for (const key in dmarcRecord) {
+                        html += `<div class="dmarc-section"><strong>${key}:</strong> ${dmarcRecord[key]}</div>`;
+                    }
+                } else {
+                    html += `<div class="alert alert-warning">No DMARC record found for ${result.domain}.</div>`;
+                }
+
+                html += `</div>`;
+                resultDiv.innerHTML = html;
+
             } catch (error) {
                 resultDiv.innerHTML = '<div class="alert alert-danger">Error fetching DMARC record. Please try again.</div>';
             }

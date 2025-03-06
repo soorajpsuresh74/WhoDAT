@@ -5,6 +5,7 @@ import quopri
 from email.policy import default
 from email.parser import HeaderParser
 from email import message_from_file
+from bs4 import BeautifulSoup
 
 # Define Regular Expressions
 MAIL_REGEX = r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
@@ -132,6 +133,46 @@ def get_attachments(filename: str, investigation):
     return data
 
 
+def get_body(filename: str):
+    """Extract the email body without HTML formatting."""
+    with open(filename, "r", encoding="utf-8") as f:
+        msg = message_from_file(f, policy=default)
+
+    body = ""
+    if msg.is_multipart():
+        for part in msg.iter_parts():
+            content_type = part.get_content_type()
+            content_disposition = str(part.get_content_disposition())
+
+            if content_type.startswith("text/plain") and "attachment" not in content_disposition:
+                try:
+                    body += part.get_payload(decode=True).decode()
+                except UnicodeDecodeError:
+                    body += part.get_payload(decode=True).decode('latin-1', 'ignore')
+
+            elif content_type.startswith("text/html") and "attachment" not in content_disposition:
+                try:
+                    html_body = part.get_payload(decode=True).decode()
+                    soup = BeautifulSoup(html_body, "html.parser")
+                    body += soup.get_text()
+                except UnicodeDecodeError:
+                    html_body = part.get_payload(decode=True).decode('latin-1', 'ignore')
+                    soup = BeautifulSoup(html_body, "html.parser")
+                    body += soup.get_text()
+
+    else:
+        try:
+            html_body = msg.get_payload(decode=True).decode()
+            soup = BeautifulSoup(html_body, "html.parser")
+            body = soup.get_text()
+        except UnicodeDecodeError:
+            html_body = msg.get_payload(decode=True).decode('latin-1', 'ignore')
+            soup = BeautifulSoup(html_body, "html.parser")
+            body = soup.get_text()
+
+    return body.strip()
+
+
 def analyze_email_main(filename: str, investigation: bool):
     """Main function to analyze an email"""
     with open(filename, "r", encoding="utf-8") as f:
@@ -142,12 +183,7 @@ def analyze_email_main(filename: str, investigation: bool):
         "Digests": get_digests(mail_data, filename, investigation),
         "Links": get_links(mail_data, investigation),
         "Attachments": get_attachments(filename, investigation),
+        "Body": get_body(filename),
     }
 
     return final_data
-
-
-
-
-
-

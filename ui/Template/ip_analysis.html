@@ -6,6 +6,12 @@
     <title>IP Analysis</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .spinner-border {
+            display: none;
+            margin: 10px auto;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -14,18 +20,27 @@
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <h2 class="text-center">Analyze an IP Address</h2>
-                <form id="ipAnalysisForm">
-                    <div class="mb-3">
-                        <label for="ipAddress" class="form-label">Enter IP Address</label>
-                        <input type="text" class="form-control" id="ipAddress" placeholder="192.168.1.1">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h3 class="text-center mb-4">Analyze an IP Address</h3>
+                        <form id="ipAnalysisForm">
+                            <div class="mb-3">
+                                <label for="ipAddress" class="form-label">Enter IP Address</label>
+                                <input type="text" class="form-control" id="ipAddress" placeholder="192.168.1.1">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Analyze</button>
+                        </form>
+                        <div class="text-center mt-3">
+                            <div class="spinner-border text-primary" role="status" id="loadingSpinner">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                        <div id="analysisResult" class="mt-4"></div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Analyze</button>
-                </form>
-                <div id="analysisResult" class="mt-4"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -35,9 +50,14 @@
             event.preventDefault();
             let ipInput = document.getElementById("ipAddress").value.trim();
             let resultDiv = document.getElementById("analysisResult");
+            let loadingSpinner = document.getElementById("loadingSpinner");
+
+            resultDiv.innerHTML = "";  
+            loadingSpinner.style.display = "block";  
 
             if (!ipInput) {
-                resultDiv.innerHTML = '<div class="alert alert-warning">Please enter an IP address.</div>';
+                loadingSpinner.style.display = "none";
+                resultDiv.innerHTML = '<div class="alert alert-warning">Please enter a valid IP address.</div>';
                 return;
             }
 
@@ -48,18 +68,21 @@
                     body: JSON.stringify({ ip: ipInput }),
                 });
 
-                if (!response.ok) throw new Error("Network error");
+                if (!response.ok) throw new Error("Failed to fetch data. Please try again.");
 
                 let result = await response.json();
+                loadingSpinner.style.display = "none";
+
                 resultDiv.innerHTML = `
                     <div class="alert alert-success">
-                        <h4>Analysis Result</h4>
+                        <h4 class="mb-3">Analysis Result</h4>
                         <p><strong>IP Address:</strong> ${result.ip}</p>
                         <p><strong>Geolocation:</strong> ${result.geolocation}</p>
                         <p><strong>Blacklist Status:</strong> ${result.blacklist_status}</p>
                     </div>
                 `;
             } catch (error) {
+                loadingSpinner.style.display = "none";
                 resultDiv.innerHTML = '<div class="alert alert-danger">Error analyzing the IP. Please try again.</div>';
             }
         });
