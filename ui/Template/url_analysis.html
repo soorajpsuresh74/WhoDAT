@@ -1,133 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Analysis</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        .card {
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .form-control {
-            border-radius: 8px;
-        }
-        .btn-primary {
-            border-radius: 8px;
-        }
-        .loading {
-            display: none;
-            text-align: center;
-            font-size: 1.2rem;
-            color: #007bff;
-        }
-        .spinner-border {
-            width: 2rem;
-            height: 2rem;
-        }
-        .badge {
-            font-size: 1rem;
-            padding: 5px 10px;
-        }
-    </style>
+    <!-- Basic Meta Tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Mobile Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="URL analysis, phishing detection, malicious URL check" />
+    <meta name="description" content="Analyze URLs for potential phishing, malware, and other threats." />
+    <meta name="author" content="Spering" />
+
+    <title>URL Analysis - Spering</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">URL Analysis</a>
-        </div>
-    </nav>
+    <div class="hero_area">
+        <!-- Header Section -->
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="Spering Logo" />
+                        <span>URL Analyzer</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <!-- End Header Section -->
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <div class="card p-4">
-                    <h2 class="text-center mb-4">Analyze a URL</h2>
-                    <form id="urlAnalysisForm">
-                        <div class="mb-3">
-                            <label for="urlInput" class="form-label">Enter URL</label>
-                            <input type="text" class="form-control" id="urlInput" placeholder="https://example.com">
+        <!-- Hero Section -->
+        <section class="slider_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="detail-box">
+                            <h1>Analyze URLs for Phishing & Malware</h1>
+                            <p>Enter a URL to check for phishing, malware, and other security threats using AI-driven analysis.</p>
+                            <div class="btn-box">
+                                <a href="about.html" class="btn-1">Learn More</a>
+                                <a href="analysis.html" class="btn-2">Start Analysis</a>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Analyze</button>
-                    </form>
-                    <div class="loading mt-3" id="loading">
-                        <div class="spinner-border text-primary" role="status"></div>
-                        <p>Analyzing URL, please wait...</p>
                     </div>
-                    <div id="analysisResult" class="mt-4"></div>
+                    <div class="col-md-6 img-container">
+                        <div class="img-box">
+                            <img src="images/phishing-url-analysis-machine-learning-1.png" alt="URL Analysis">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Hero Section -->
+    </div>
+
+    <!-- URL Analysis Section -->
+    <section class="experience_section layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="detail-box">
+                        <div class="container">
+                            <div class="card p-4">
+                                <h2 class="text-center text-primary">URL Analysis</h2>
+                                <p class="text-center">Enter a URL to check for malicious activities, phishing attempts, and more.</p>
+                                <form id="urlAnalysisForm">
+                                    <div class="mb-3">
+                                        <label for="urlInput" class="form-label">Enter URL</label>
+                                        <input type="text" class="form-control" id="urlInput" placeholder="https://example.com" />
+                                    </div>
+                                    <div class="btn-box">
+                                        <button class="btn-1" type="submit">Analyze URL</button>
+                                    </div>
+                                </form>
+                                <div id="loading" class="text-center mt-3" style="display:none;">
+                                    <div class="spinner-border text-primary" role="status"></div>
+                                    <p>Analyzing URL, please wait...</p>
+                                </div>
+                                <div id="analysisResult" class="mt-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="img-box">
+                        <img src="images/phishing-url-analysis-machine-learning-1.png" alt="Security Check">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- End URL Analysis Section -->
+
+    <!-- Footer Section -->
+    <footer class="container-fluid footer_section">
+        <div class="container">
+            <p>&copy; <span id="displayDate"></span> All Rights Reserved | URL Analyzer by Spering</p>
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/custom.js"></script>
 
     <script>
-        document.getElementById("urlAnalysisForm").addEventListener("submit", async function (event) {
-            event.preventDefault();
-            let urlInput = document.getElementById("urlInput").value.trim();
-            let resultDiv = document.getElementById("analysisResult");
-            let loadingIndicator = document.getElementById("loading");
+    document.getElementById("urlAnalysisForm").addEventListener("submit", async function(event) {
+        event.preventDefault();
+        let urlInput = document.getElementById("urlInput").value.trim();
+        let resultDiv = document.getElementById("analysisResult");
+        let loadingIndicator = document.getElementById("loading");
 
-            resultDiv.innerHTML = "";
-            if (!isValidURL(urlInput)) {
-                resultDiv.innerHTML = '<div class="alert alert-warning text-center">Please enter a valid URL.</div>';
-                return;
-            }
-
-            loadingIndicator.style.display = "block";
-
-            try {
-                let response = await fetch("/analyze-url", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ url: urlInput }),
-                });
-
-                if (!response.ok) throw new Error("Network error");
-
-                let result = await response.json();
-                displayAnalysis(result);
-            } catch (error) {
-                resultDiv.innerHTML = '<div class="alert alert-danger text-center">Error analyzing the URL. Please try again.</div>';
-            } finally {
-                loadingIndicator.style.display = "none";
-            }
-        });
-
-        function isValidURL(url) {
-            let pattern = /^(https?:\/\/)?([\w\d.-]+)\.([a-z]{2,6})([\/\w\d.-]*)*\/?$/;
-            return pattern.test(url);
+        resultDiv.innerHTML = "";
+        if (!isValidURL(urlInput)) {
+            resultDiv.innerHTML = '<div class="alert alert-warning text-center">Please enter a valid URL.</div>';
+            return;
         }
 
-        function displayAnalysis(result) {
-            let resultDiv = document.getElementById("analysisResult");
+        loadingIndicator.style.display = "block";
 
-            if (!result || typeof result.status === "undefined") {
-                resultDiv.innerHTML = "<div class='alert alert-danger text-center'>Invalid analysis data.</div>";
-                return;
-            }
+        try {
+            let response = await fetch("/analyze-url", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ url: urlInput }),
+            });
 
-            let html = `
-                <div class="card p-3">
-                    <h5 class="card-title text-center">Analysis Result</h5>
-                    <p class="analysis-item"><strong>URL:</strong> <a href="${result.link}" target="_blank">${result.link}</a></p>
-                    <p class="analysis-item"><strong>Status:</strong> ${result.status ? '<span class="badge bg-success">Success</span>' : '<span class="badge bg-danger">Failed</span>'}</p>
-                    <p class="analysis-item"><strong>Malicious:</strong> <span class="badge bg-danger">${result.malicious}</span></p>
-                    <p class="analysis-item"><strong>Suspicious:</strong> <span class="badge bg-warning">${result.suspicious}</span></p>
-                    <p class="analysis-item"><strong>Harmless:</strong> <span class="badge bg-success">${result.harmless}</span></p>
-                    <p class="analysis-item"><strong>Undetected:</strong> <span class="badge bg-secondary">${result.undetected}</span></p>
-                    <p class="analysis-item"><strong>Redirects:</strong> ${result.redirects.length > 0 ? result.redirects.join(', ') : 'None'}</p>
-                </div>
-            `;
+            if (!response.ok) throw new Error("Network error");
 
-            resultDiv.innerHTML = html;
+            let result = await response.json();
+            displayAnalysis(result);
+        } catch (error) {
+            resultDiv.innerHTML = '<div class="alert alert-danger text-center">Error analyzing the URL. Please try again.</div>';
+        } finally {
+            loadingIndicator.style.display = "none";
         }
+    });
+
+    function isValidURL(url) {
+        let pattern = /^(https?:\/\/)?([\w\d.-]+)\.([a-z]{2,6})([\/\w\d.-]*)*\/?$/;
+        return pattern.test(url);
+    }
+
+    function displayAnalysis(result) {
+        let resultDiv = document.getElementById("analysisResult");
+        let outputHTML = `
+            <div class="card p-3">
+                <h5 class="card-title text-center">Analysis Result</h5>
+                <p><strong>URL:</strong> <a href="${result.link}" target="_blank">${result.link}</a></p>
+                <p><strong>Status:</strong> ${result.status ? '<span class="badge bg-success">Success</span>' : '<span class="badge bg-danger">Failed</span>'}</p>
+                <p><strong>Malicious:</strong> <span class="badge bg-danger">${result.malicious}</span></p>
+                <p><strong>Suspicious:</strong> <span class="badge bg-warning">${result.suspicious}</span></p>
+                <p><strong>Harmless:</strong> <span class="badge bg-success">${result.harmless}</span></p>
+                <p><strong>Undetected:</strong> <span class="badge bg-secondary">${result.undetected}</span></p>
+            </div>
+        `;
+        resultDiv.innerHTML = outputHTML;
+    }
     </script>
 </body>
 </html>

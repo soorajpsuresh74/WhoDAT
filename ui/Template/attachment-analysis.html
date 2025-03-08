@@ -2,102 +2,123 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords" content="attachment analysis, file security, document scanning" />
+    <meta name="description" content="Securely upload and analyze your documents to detect potential threats." />
+    <meta name="author" content="Spering" />
+
     <title>Attachment Analysis</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-    <style>
-        body {
-            padding: 20px;
-        }
 
-        .hero {
-            text-align: center;
-            padding: 50px;
-            background-color: #007bff;
-            color: white;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .form-container {
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-
-        .analysis-section {
-            margin-top: 20px;
-        }
-
-        .analysis-item {
-            margin-bottom: 10px;
-        }
-
-        .image-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .image-container img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="container">
-        <div class="hero">
-            <h1>Attachment Analysis</h1>
-            <p>Securely upload and analyze your documents to detect potential threats.</p>
-        </div>
+    <div class="hero_area">
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="Spering Logo" />
+                        <span>WHODat</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
 
-        <div class="image-container">
-            <img src="https://source.unsplash.com/500x300/?security,technology" alt="Secure File Analysis" />
-        </div>
-
-        <div class="form-container">
-            <h2>Upload Your Files</h2>
-            <p>Upload PDF, DOC, or DOCX files for analysis. Our system will inspect them for potential security threats.</p>
-            <form id="uploadform" enctype="multipart/form-data">
-                <div class="mb-3">
-                    <label for="myFiles" class="form-label">Select Files</label>
-                    <input type="file" id="myFiles" name="files" accept=".pdf,.doc,.docx" multiple class="form-control" />
+        <section class="slider_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="detail-box">
+                            <h1>Analyze Attachments</h1>
+                            <p>Securely upload and analyze your documents for potential threats.</p>
+                            <div class="btn-box">
+                                <a href="#fileUpload" class="btn-2">Start Analysis</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 img-container">
+                        <div class="img-box">
+                            <img src="images/What is Document Analysis.png" alt="Secure File Analysis">
+                        </div>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Upload</button>
-            </form>
-            <div id="status" class="mt-2"></div>
-            <div id="message" class="mt-2"></div>
-        </div>
-
-        <div class="form-container">
-            <h2>Analyze Uploaded Files</h2>
-            <p>Select an uploaded file and analyze its content for potential risks.</p>
-            <form id="analyzeForm">
-                <div class="mb-3">
-                    <label for="fileSelect" class="form-label">Select a file</label>
-                    <select id="fileSelect" class="form-select">
-                        <option value="">Select a file</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-success">Analyze</button>
-            </form>
-            <div id="analysisResult" class="mt-3 analysis-section"></div>
-        </div>
+            </div>
+        </section>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <section class="experience_section layout_padding" id="fileUpload">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="img-box">
+                        <img src="images/What is Document Analysis.png" alt="Secure File Upload">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="detail-box">
+                        <div class="container">
+                            <div class="card p-4">
+                                <h2 class="text-center text-primary">Upload Your Files</h2>
+                                <p class="text-center">Select and upload documents to analyze.</p>
+                                <form id="uploadform" enctype="multipart/form-data">
+                                    <div class="mb-3">
+                                        <label for="myFiles" class="form-label">Select Files</label>
+                                        <input type="file" id="myFiles" name="files" accept=".pdf,.doc,.docx" multiple class="form-control" />
+                                    </div>
+                                    <div class="btn-box">
+                                        <button class="btn-1" type="submit">Upload</button>
+                                    </div>
+                                </form>
+                                <div id="status" class="mt-2"></div>
+                                <div id="message" class="mt-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="analysis_section layout_padding" id="fileAnalysis">
+        <div class="container">
+            <div class="card p-4">
+                <h2 class="text-center text-primary">Analyze Uploaded Files</h2>
+                <form id="analyzeForm">
+                    <div class="mb-3">
+                        <label for="fileSelect" class="form-label">Select a file</label>
+                        <select id="fileSelect" class="form-select">
+                            <option value="">Select a file</option>
+                        </select>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btn-1" type="submit">Analyze</button>
+                    </div>
+                </form>
+                <div id="analysisResult" class="mt-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid footer_section">
+        <div class="container">
+            <p>&copy; <span id="displayDate"></span> All Rights Reserved | Spering</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script>
         document.getElementById("uploadform").addEventListener("submit", async (e) => {
             e.preventDefault();
             const myFiles = document.getElementById("myFiles").files;
             const formData = new FormData();
             Array.from(myFiles).forEach((file) => formData.append("files", file));
-
             try {
                 const response = await fetch("/upload-attachment", { method: "POST", body: formData });
                 const json = await response.json();
@@ -110,7 +131,6 @@
                 document.getElementById("status").textContent = `Status: ${response.status}`;
                 document.getElementById("message").textContent = `Message: ${json.message}`;
             } catch (error) {
-                console.error("Error:", error);
                 document.getElementById("message").textContent = "Upload failed.";
             }
         });
@@ -122,7 +142,6 @@
                 alert("Please select a file to analyze!");
                 return;
             }
-
             try {
                 const response = await fetch("/analyze-attachment", {
                     method: "POST",
@@ -130,29 +149,17 @@
                     body: JSON.stringify({ filename }),
                 });
                 const json = await response.json();
-                displayAnalysis(json);
+                document.getElementById("analysisResult").innerHTML = `
+                    <p><strong>Message:</strong> ${json.analysis.message}</p>
+                    <p><strong>Malicious:</strong> ${json.analysis.analysis.Malicious}</p>
+                    <p><strong>Suspicious:</strong> ${json.analysis.analysis.Suspicious}</p>
+                    <p><strong>Harmless:</strong> ${json.analysis.analysis.Harmless}</p>
+                    <p><strong>Undetected:</strong> ${json.analysis.analysis.Undetected}</p>
+                `;
             } catch (error) {
-                console.error("Error:", error);
                 document.getElementById("analysisResult").textContent = "Analysis failed.";
             }
         });
-
-        function displayAnalysis(data) {
-            if (!data || !data.analysis || !data.analysis.analysis) {
-                document.getElementById("analysisResult").innerHTML = "<p>Invalid analysis data.</p>";
-                return;
-            }
-            const analysis = data.analysis.analysis;
-            document.getElementById("analysisResult").innerHTML = `
-                <div class="analysis-item"><strong>Message:</strong> ${data.analysis.message}</div>
-                <div class="analysis-item"><strong>Filename:</strong> ${data.filename}</div>
-                <div class="analysis-item"><strong>File:</strong> ${data.analysis.file}</div>
-                <div class="analysis-item"><strong>Malicious:</strong> ${analysis.Malicious}</div>
-                <div class="analysis-item"><strong>Suspicious:</strong> ${analysis.Suspicious}</div>
-                <div class="analysis-item"><strong>Harmless:</strong> ${analysis.Harmless}</div>
-                <div class="analysis-item"><strong>Undetected:</strong> ${analysis.Undetected}</div>
-            `;
-        }
     </script>
 </body>
 </html>

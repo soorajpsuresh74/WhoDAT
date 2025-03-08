@@ -46,6 +46,7 @@ router.post("/analyze-email", async (req, res) => {
     }
 
     const response = await axios.post(`${FASTAPI_URL}/analyze-email`, { filename });
+    
     res.json(response.data);
   } catch (error) {
     console.error("❌ Error analyzing email:", error.message);

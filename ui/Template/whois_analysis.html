@@ -1,64 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords" content="WHOIS lookup, domain information, domain registrar" />
+    <meta name="description" content="Check WHOIS records to retrieve domain registration details." />
+    <meta name="author" content="WHOIS Lookup" />
+
     <title>WHOIS Lookup</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        .whois-section {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
 
-        .whois-section h5 {
-            margin-bottom: 10px;
-        }
-
-        .whois-section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .whois-section ul li {
-            margin-bottom: 5px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">WHOIS Lookup</a>
-        </div>
-    </nav>
 
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <h2 class="text-center">WHOIS Domain Lookup</h2>
-                <form id="whoisLookupForm">
-                    <div class="mb-3">
-                        <label for="domainInput" class="form-label">Enter Domain Name</label>
-                        <input type="text" class="form-control" id="domainInput" placeholder="example.com">
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Lookup</button>
-                </form>
-                <div id="whoisResult" class="mt-4"></div>
+<body>
+    <div class="hero_area">
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="WHOIS Lookup Logo" />
+                        <span>WHODat</span>
+                    </a>
+                </nav>
             </div>
-        </div>
+        </header>
+
+        <section class="slider_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="detail-box">
+                            <h1>Check WHOIS Record</h1>
+                            <p>Enter a domain name to retrieve WHOIS details and get insights about its registration.</p>
+                            <div class="btn-box">
+                                <a href="#whoisCheck" class="btn-2">Start Lookup</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 img-container">
+                        <div class="img-box">
+                            <img src="images/whois.jpg" alt="WHOIS Lookup">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
+    <section class="experience_section layout_padding" id="whoisCheck">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="img-box">
+                        <img src="images/whois.jpg" alt="WHOIS Information">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="detail-box">
+                        <div class="container">
+                            <div class="card p-4">
+                                <h2 class="text-center text-primary">WHOIS Lookup</h2>
+                                <p class="text-center">Enter a domain to check its WHOIS record and get details about its registration.</p>
+                                <form id="whoisLookupForm">
+                                    <div class="mb-3">
+                                        <label for="domainInput" class="form-label">Domain Name</label>
+                                        <input type="text" class="form-control" id="domainInput" placeholder="example.com">
+                                    </div>
+                                    <div class="btn-box">
+                                        <button class="btn-1" type="submit">Check WHOIS</button>
+                                    </div>
+                                </form>
+                                <div id="whoisResult" class="mt-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid footer_section">
+        <div class="container">
+            <p>&copy; <span id="displayDate"></span> All Rights Reserved | WHOIS Lookup</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script>
-        document.getElementById("whoisLookupForm").addEventListener("submit", async function (event) {
+        document.getElementById("whoisLookupForm").addEventListener("submit", async function(event) {
             event.preventDefault();
             let domainInput = document.getElementById("domainInput").value.trim();
             let resultDiv = document.getElementById("whoisResult");
 
             if (!domainInput) {
-                resultDiv.innerHTML = '<div class="alert alert-warning">Please enter a domain name.</div>';
+                resultDiv.innerHTML = '<div class="alert alert-warning">Please enter a domain.</div>';
                 return;
             }
 
@@ -72,41 +113,13 @@
                 if (!response.ok) throw new Error("Network error");
 
                 let result = await response.json();
-                resultDiv.innerHTML = `
-                    <div class="alert alert-success">
-                        <h4>WHOIS Information</h4>
-                        <div class="whois-section">
-                            <h5>Domain Information</h5>
-                            <p><strong>Domain:</strong> ${result.domain}</p>
-                            <p><strong>Domain ID:</strong> ${result.domain_id}</p>
-                            <p><strong>Status:</strong> ${result.status}</p>
-                            <p><strong>Creation Date:</strong> ${result.create_date}</p>
-                            <p><strong>Update Date:</strong> ${result.update_date}</p>
-                            <p><strong>Expiration Date:</strong> ${result.expire_date}</p>
-                            <p><strong>Domain Age:</strong> ${result.domain_age} days</p>
-                            <p><strong>WHOIS Server:</strong> ${result.whois_server}</p>
-                        </div>
-                        <div class="whois-section">
-                            <h5>Registrar</h5>
-                            <p><strong>Name:</strong> ${result.registrar.name}</p>
-                            <p><strong>URL:</strong> <a href="${result.registrar.url}" target="_blank">${result.registrar.url}</a></p>
-                        </div>
-                        <div class="whois-section">
-                            <h5>Registrant</h5>
-                            <p><strong>Name:</strong> ${result.registrant.name}</p>
-                            <p><strong>Organization:</strong> ${result.registrant.organization}</p>
-                            <p><strong>Address:</strong> ${result.registrant.street_address}, ${result.registrant.city}, ${result.registrant.region}, ${result.registrant.zip_code}, ${result.registrant.country}</p>
-                            <p><strong>Phone:</strong> ${result.registrant.phone}</p>
-                            <p><strong>Email:</strong> <a href="${result.registrant.email}" target="_blank">Contact</a></p>
-                        </div>
-                        <div class="whois-section">
-                            <h5>Nameservers</h5>
-                            <ul>${result.nameservers.map(ns => `<li>${ns}</li>`).join('')}</ul>
-                        </div>
-                    </div>
-                `;
+                let html = `<div class="alert alert-success"><h4>WHOIS Record for ${result.domain}</h4>`;
+                html += `<div class="whois-section"><h5>Registrar</h5><p><strong>Name:</strong> ${result.registrar.name}</p><p><strong>URL:</strong> <a href="${result.registrar.url}" target="_blank">${result.registrar.url}</a></p></div>`;
+                html += `<div class="whois-section"><h5>Nameservers</h5><ul>${result.nameservers.map(ns => `<li>${ns}</li>`).join('')}</ul></div>`;
+                html += `</div>`;
+                resultDiv.innerHTML = html;
             } catch (error) {
-                resultDiv.innerHTML = '<div class="alert alert-danger">Error retrieving WHOIS data. Please try again.</div>';
+                resultDiv.innerHTML = '<div class="alert alert-danger">Error fetching WHOIS record. Please try again.</div>';
             }
         });
     </script>

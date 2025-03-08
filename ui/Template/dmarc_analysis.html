@@ -1,89 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords" content="DMARC lookup, email security, domain authentication" />
+    <meta name="description" content="Check DMARC records to verify email authentication and prevent spoofing." />
+    <meta name="author" content="DMARC Lookup" />
+
     <title>DMARC Lookup</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        .dmarc-section {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
 
-        .dmarc-section h5 {
-            margin-bottom: 10px;
-        }
-
-        .logo {
-            max-width: 150px;
-            display: block;
-            margin: 10px auto;
-        }
-
-        .image-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .analysis-image {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="https://via.placeholder.com/150" alt="DMARC Lookup Logo" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Email Security</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Network Security</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Web Security</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">File Analysis</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container mt-4">
-        <div class="image-container">
-            <img src="https://via.placeholder.com/600x300" alt="DMARC Analysis Overview" class="analysis-image">
-            <p class="text-muted">A visualization of DMARC analysis showing email authentication results.</p>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <h2 class="text-center">Check DMARC Record</h2>
-                <form id="dmarcLookupForm">
-                    <div class="mb-3">
-                        <label for="domainInput" class="form-label">Enter Domain</label>
-                        <input type="text" class="form-control" id="domainInput" placeholder="example.com">
+    <div class="hero_area">
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="DMARC Lookup Logo" />
+                        <span>WHODat</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="email-security.html">Email Security</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="network-security.html">Network Security</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="web-security.html">Web Security</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="file-analysis.html">File Analysis</a>
+                            </li>
+                        </ul>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Check DMARC</button>
-                </form>
-                <div id="lookupResult" class="mt-4"></div>
+                </nav>
             </div>
-        </div>
+        </header>
+
+        <section class="slider_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="detail-box">
+                            <h1>Check Your DMARC Record</h1>
+                            <p>Enter a domain name to verify its DMARC configuration and strengthen your email security.</p>
+                            <div class="btn-box">
+                                <a href="email-security.html" class="btn-1">Learn More</a>
+                                <a href="#dmarcCheck" class="btn-2">Start Lookup</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 img-container">
+                        <div class="img-box">
+                            <img src="images/dmarc.jpg" alt="DMARC Analysis">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <footer class="text-center text-white bg-dark p-3 mt-5">
-        &copy; 2025 DMARC Lookup | All Rights Reserved
+    <section class="experience_section layout_padding" id="dmarcCheck">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="img-box">
+                        <img src="images/dmarc.jpg" alt="DMARC Security">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="detail-box">
+                        <div class="container">
+                            <div class="card p-4">
+                                <h2 class="text-center text-primary">DMARC Lookup</h2>
+                                <p class="text-center">Enter a domain to check its DMARC record and ensure proper email authentication.</p>
+                                <form id="dmarcLookupForm">
+                                    <div class="mb-3">
+                                        <label for="domainInput" class="form-label">Domain Name</label>
+                                        <input type="text" class="form-control" id="domainInput" placeholder="example.com">
+                                    </div>
+                                    <div class="btn-box">
+                                        <button class="btn-1" type="submit">Check DMARC</button>
+                                    </div>
+                                </form>
+                                <div id="lookupResult" class="mt-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid footer_section">
+        <div class="container">
+            <p>&copy; <span id="displayDate"></span> All Rights Reserved | DMARC Lookup</p>
+        </div>
     </footer>
 
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script>
-        document.getElementById("dmarcLookupForm").addEventListener("submit", async function (event) {
+        document.getElementById("dmarcLookupForm").addEventListener("submit", async function(event) {
             event.preventDefault();
             let domainInput = document.getElementById("domainInput").value.trim();
             let resultDiv = document.getElementById("lookupResult");
@@ -123,11 +158,11 @@
 
                 html += `</div>`;
                 resultDiv.innerHTML = html;
-
             } catch (error) {
                 resultDiv.innerHTML = '<div class="alert alert-danger">Error fetching DMARC record. Please try again.</div>';
             }
         });
     </script>
 </body>
+
 </html>

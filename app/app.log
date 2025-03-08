@@ -658,3 +658,43 @@
  - Analysis: https://www.virustotal.com/api/v3/analyses
  - URL Scan: https://www.virustotal.com/api/v3/urls
  - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-08 14:17:54,917 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-08 14:17:59,242 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-08 15:04:25,687 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-08 15:07:42,238 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-08 15:08:57,907 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-08 15:30:55,917 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-08 15:45:34,482 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-08 15:45:36,686 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/

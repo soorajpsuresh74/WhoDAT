@@ -55,10 +55,10 @@ def analyze_email(request: AnalyzeRequest):
 
         result = {
             "Filename": request.filename,
-            "Headers": analyze_result.get('Headers', {}),
-            "Digests": analyze_result.get('Digests', {}),
-            "Links": analyze_result.get('Links', []),
-            "Attachments": analyze_result.get('Attachments', []),
+            "Headers": analyze_result.get("Headers", {}).get("Headers", {}).get("Data", {}),
+            "Digests": analyze_result.get("Digests", {}).get("Digests", {}).get("Data", {}),
+            "Links": analyze_result.get("Links", {}).get("Links", {}).get("Data", {}),
+            "Attachments": analyze_result.get("Attachments", {}).get("Attachments", {}).get("Data", {}),
             "Body": email_body,
             "Toxic Prediction": toxic_comment_prediction,
             "Spam Prediction": spam_prediction
