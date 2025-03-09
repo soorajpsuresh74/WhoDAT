@@ -698,3 +698,13 @@
  - Analysis: https://www.virustotal.com/api/v3/analyses
  - URL Scan: https://www.virustotal.com/api/v3/urls
  - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-09 05:49:38,458 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-09 05:49:41,569 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
