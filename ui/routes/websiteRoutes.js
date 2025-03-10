@@ -19,10 +19,7 @@ router.post("/analyze-website", async (req, res) => {
             return res.status(400).json({ error: "Website URL is required" });
         }
 
-        // Forward request to FastAPI backend
         const response = await axios.post(`${FASTAPI_URL}/analyze-website`, { website });
-        
-
         res.json(response.data);
     } catch (error) {
         console.error("❌ Error analyzing website:", error.message);

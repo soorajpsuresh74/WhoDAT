@@ -708,3 +708,15 @@
  - Analysis: https://www.virustotal.com/api/v3/analyses
  - URL Scan: https://www.virustotal.com/api/v3/urls
  - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-10 07:01:07,464 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-10 07:01:11,600 - INFO - VirusTotal Endpoints: 
+ - File Upload: https://www.virustotal.com/api/v3/files
+ - Analysis: https://www.virustotal.com/api/v3/analyses
+ - URL Scan: https://www.virustotal.com/api/v3/urls
+ - IP Scan: https://www.virustotal.com/api/v3/ip_addresses/
+2025-03-10 07:12:53,548 - INFO - Scanning link: https://developers.cloudflare.com/ | URL: https://www.virustotal.com/api/v3/urls/aHR0cHM6Ly9kZXZlbG9wZXJzLmNsb3VkZmxhcmUuY29tLw
+2025-03-10 07:12:54,477 - INFO - Scan result for https://developers.cloudflare.com/: {'status': True, 'link': 'https://developers.cloudflare.com/', 'malicious': 0, 'suspicious': 0, 'harmless': 68, 'undetected': 28, 'redirects': ['iframes', 'external-resources']}

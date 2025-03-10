@@ -95,54 +95,63 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
-        document.getElementById("websiteAnalysisForm").addEventListener("submit", async function(event) {
-            event.preventDefault();
-            let websiteInput = document.getElementById("websiteInput").value.trim();
-            let resultDiv = document.getElementById("analysisResult");
-            let spinner = document.getElementById("loadingSpinner");
-            resultDiv.innerHTML = "";
-            spinner.style.display = "block";
+    document.getElementById("websiteAnalysisForm").addEventListener("submit", async function(event) {
+        event.preventDefault();
+        let websiteInput = document.getElementById("websiteInput").value.trim();
+        let resultDiv = document.getElementById("analysisResult");
+        let spinner = document.getElementById("loadingSpinner");
+        resultDiv.innerHTML = "";
+        spinner.style.display = "block";
 
-            if (!isValidURL(websiteInput)) {
-                resultDiv.innerHTML = '<div class="alert alert-warning">Please enter a valid website URL.</div>';
-                spinner.style.display = "none";
-                return;
-            }
-
-            try {
-                let response = await fetch("/analyze-website", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ website: websiteInput }),
-                });
-                if (!response.ok) throw new Error("Network error");
-                let result = await response.json();
-                displayAnalysis(result);
-            } catch (error) {
-                resultDiv.innerHTML = '<div class="alert alert-danger">Error analyzing the website. Please try again.</div>';
-            } finally {
-                spinner.style.display = "none";
-            }
-        });
-
-        function displayAnalysis(result) {
-            let resultDiv = document.getElementById("analysisResult");
-            let html = `<div><strong>Website:</strong> ${result.website}</div>`;
-            html += `<div><strong>Malicious Status:</strong> ${result.malicious_status}</div>`;
-            html += `<div><strong>Screenshot:</strong> ${result.screenshot ? `<img src="${result.screenshot}" class="img-fluid" alt="Screenshot">` : 'Not Available'}</div>`;
-            html += `<div><strong>Scan Results:</strong> Checking...</div>`;
-            resultDiv.innerHTML = html;
-            pollScanResult(result.website, 10);
+        if (!isValidURL(websiteInput)) {
+            resultDiv.innerHTML = '<div class="alert alert-warning">Please enter a valid website URL.</div>';
+            spinner.style.display = "none";
+            return;
         }
 
-        function isValidURL(url) {
-            try {
-                new URL(url);
-                return true;
-            } catch (_) {
-                return false;
-            }
+        try {
+            console.log("Submitting website:", websiteInput);
+            let response = await fetch("/analyze-website", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ website: websiteInput }),
+            });
+
+            if (!response.ok) throw new Error("Network error");
+            let result = await response.json();
+            console.log("API Response:", result);
+            displayAnalysis(result);
+        } catch (error) {
+            console.error("API Error:", error);
+            resultDiv.innerHTML = '<div class="alert alert-danger">Error analyzing the website. Please try again.</div>';
+        } finally {
+            spinner.style.display = "none";
         }
-    </script>
+    });
+
+    function displayAnalysis(result) {
+        let resultDiv = document.getElementById("analysisResult");
+
+        if (!result || !result.website) {
+            resultDiv.innerHTML = '<div class="alert alert-danger">Invalid response from server.</div>';
+            return;
+        }
+
+        let html = `<div class="alert alert-success"><strong>Website:</strong> ${result.website}</div>`;
+        html += `<div class="alert alert-info"><strong>Malicious Status:</strong> ${result.malicious_status || "Unknown"}</div>`;
+        html += `<div><strong>Screenshot:</strong> ${result.screenshot ? `<img src="${result.screenshot}" class="img-fluid" alt="Screenshot">` : 'Not Available'}</div>`;
+
+        resultDiv.innerHTML = html;
+    }
+
+    function isValidURL(url) {
+        try {
+            new URL(url);
+            return true;
+        } catch (_) {
+            return false;
+        }
+    }
+</script>
 </body>
 </html>
